@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .tm-main-nav {
+            overflow-y: auto;
+            height: 380px;  /* Adjust height as necessary */
+        }
+        .tm-main-nav::-webkit-scrollbar {
+            display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+        .tm-main-nav {
+            -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none;  /* Hide scrollbar for Firefox */
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* This line is not strictly necessary unless you also want to vertically center the button, but it's often used with justify-content for full centering */
+            height: 100%; /* You can adjust this as needed or remove it if you don't want to set a specific height */
+        }
+        .tm-button.tm-button-wide {
+            border-radius: 5px; /* This will give the button rounded corners */
+            margin-bottom: 20px; /* This will add space below the button */
+        }
+    </style>
+
+    <title>Professional, Scientific & Technical Services</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="/css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <!-- Left column: logo and menu -->
+                    <div class="tm-blue-bg tm-left-column">                        
+                        <div class="tm-logo-div text-xs-center">
+                            <img src="/img/slogo.png" alt="Logo">
+                            <h1 class="tm-site-name">Professional, Scientific & Technical Services</h1>
+                        </div>
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                                <li class="tm-nav-item">
+                                    <a href="#welcome" class="tm-nav-item-link">Skill Set</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#about" class="tm-nav-item-link">Core Skills</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#galleryone" class="tm-nav-item-link">Skill Tree</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#secondgallery" class="tm-nav-item-link">Optional Major Advice</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#contact" class="tm-nav-item-link">Save Report</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#thirdgallery" class="tm-nav-item-link">Return to XSalary Home</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <script>
+                            const navElement = document.getElementById('autoScrollNav');
+                            let isScrolling = false;
+
+                            navElement.addEventListener('mousemove', function(event) {
+                                // Define the threshold distance from the edges (e.g., 20px)
+                                const threshold = 20;
+
+                                // Check if the mouse is close to the top or bottom of the navigation menu
+                                const nearTop = event.offsetY <= threshold;
+                                const nearBottom = event.offsetY >= navElement.clientHeight - threshold;
+
+                                // Scroll the menu if the mouse is near the top or bottom
+                                if (nearTop && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(-1); // Scroll up
+                                } else if (nearBottom && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(1);  // Scroll down
+                                } else if (!nearTop && !nearBottom) {
+                                    isScrolling = false; // Stop scrolling if the mouse is away from the edges
+                                }
+                            });
+
+                            function scrollMenu(direction) {
+                                if (isScrolling) {
+                                    navElement.scrollTop += 5 * direction; // 5 is the number of pixels to scroll per frame; adjust as needed
+                                    setTimeout(() => scrollMenu(direction), 30); // 30ms delay between scrolls; adjust as needed
+                                }
+                            }
+                        </script>
+                    </div> <!-- Left column: logo and menu -->
+                    
+                    <!-- Right column: content -->
+                    <div class="tm-right-column">
+                        <figure>
+                            <img src="/img/tree.jpg" alt="Header image" class="img-fluid">
+                        </figure>
+
+                        <div class="tm-content-div">
+                            <!-- Welcome section -->
+                            <section id="welcome" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Skill Set</h2>
+                                </header>
+                                <p>This is the last section of XSalary.<br>With the personality test and salary analysis all done, you should be pretty confident about your future career choices. This bonus part of XSalary is about required skills in the decided industry area. We offer a skill tree to let you get started from basic level all the way to the advanced level. You can also find useful information about the major to choose if you wish to take further education to gain the skills. In addition to this, you can choose to generate the skill set and careers support to a pdf report and save it to your local harddrive. So you can check our tips, advice and recommendations anytime, anywhere!<br>Hope our careers support will help you achieve a glorious future!</p>
+                            </section>
+                            <!-- Core Skills section -->
+                            <section id="about" class="tm-section">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 push-lg-4 push-md-5">
+                                        <header>
+                                            <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Core Skills</h2>
+                                        </header>
+                                        <p>
+                                            <b>Industry-Specific Knowledge:</b><br>
+                                            Understand the specific field within Professional, Scientific & Technical Services that interests you, whether it's law, accounting, engineering, IT consulting, or research. Stay up-to-date with industry trends and developments.<br>
+
+                                            <b>Analytical Skills:</b><br>
+                                            Enhance your ability to analyze data, problems, and complex situations to provide valuable insights and solutions to clients.<br>
+
+                                            <b>Research and Information Gathering:</b><br>
+                                            Develop research skills for gathering data, legal precedents, industry benchmarks, or scientific information to support your work.<br>
+                                            Problem-Solving<br>
+                                            Attention to Detail<br>
+                                            Project Management<br>
+                                            Client Relationship Management<br>
+                                            Ethical and Professional Standards<br>
+
+                                            <b>Adaptability:</b><br>
+                                            The ability to adapt to changing client needs, technology, and industry regulations is vital.<br>
+                                            Teamwork<br>
+
+                                            <b>Legal and Regulatory Knowledge:</b><br>
+                                            Stay informed about relevant laws, regulations, and industry standards that apply to your profession.<br>
+
+                                            <b>Computer Proficiency:</b><br>
+                                            Familiarize yourself with industry-specific software and tools used in your profession, such as legal research databases, accounting software, or CAD programs.<br>
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
+                                        <img src="/img/12.jpg" alt="Image" class="img-fluid">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Skill Tree section -->
+                            <section id="galleryone" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Skill Tree</h2></header>
+                                <p>This specialized skill tree for the mining industry outlines a progression from foundational skills to advanced expertise, including the acquisition of necessary licenses and certifications, and a focus on specialization and ongoing education within the mining sector. Please note that the specifics of each level can vary based on your role and career goals within the mining industry.</p>
+                                <p><b>Level 1: Foundation Skills</b></p>
+                                <p>
+                                    - Educational Foundation:<br>
+                                    Enroll in a relevant bachelor's degree program in your chosen field (e.g., law, accounting, engineering, IT, science, economics).
+                                </p>
+                                <p><b>Level 2: Core Skills</b></p>
+                                <p>
+                                    - Specialization: Choose a specific area within your field (e.g., corporate law, tax accounting, civil engineering, cybersecurity, environmental science).<br>
+                                    - Technical Competence：Develop technical skills relevant to your specialization.<br>
+                                    - Analytical Skills<br>
+                                    - Communication Skills
+                                </p>
+                                <p><b>Level 3: Specialized Skills</b></p>
+                                <p>
+                                    - Advanced Knowledge:<br>
+                                    Study advanced concepts and practices within your chosen field.<br>
+                                    - Research and Information Gathering:<br>
+                                    Develop research skills for gathering data, legal precedents, industry benchmarks, or scientific information.<br>
+                                    - Client Interaction:<br>
+                                    Learn how to interact effectively with clients or stakeholders in your industry.<br>
+                                    - Ethical and Professional Standards:<br>
+                                    Understand and adhere to industry-specific ethical standards.
+                                </p>
+                                <p><b>Level 4: Advanced Skills</b></p>
+                                <p>
+                                    - Advanced Education:<br>
+                                    Consider pursuing a master's degree or postgraduate program relevant to your specialization.<br>
+                                    - Certifications and Licensing:<br>
+                                    Work towards professional certifications or licenses required for your chosen profession.<br>
+                                    - Project Management:<br>
+                                    Gain project management skills for overseeing complex projects.<br>
+                                    - Networking:<br>
+                                    Build a professional network within your industry by attending events and joining industry associations.
+                                </p>
+                                <p><b>Level 5: Practical Experience</b></p>
+                                <p>
+                                    - Internships or Work Experience:<br>
+                                    Secure internships, work placements, or entry-level positions to apply your knowledge in real-world scenarios.<br>
+                                    - Entry-Level Roles:<br>
+                                    Begin your career in entry-level positions within your chosen field.<br>
+                                    - Mentoring:<br>
+                                    Seek mentors or experienced professionals who can provide guidance and support.
+                                </p>
+                                <p><b>Level 6: Advanced Roles and Specialization</b></p>
+                                <p>
+                                    - Client Management:<br>
+                                    Develop advanced client management skills for handling complex client relationships.<br>
+                                    - Leadership Skills:<br>
+                                    Cultivate leadership and management skills for roles with greater responsibility.<br>
+                                    - Legal and Regulatory Expertise:<br>
+                                    If applicable, become an expert in the legal and regulatory aspects of your profession.<br>
+                                    - Innovation and Problem-Solving:<br>
+                                    Focus on innovation and creative problem-solving to address unique challenges in your field.
+                                </p>
+                                <p><b>Level 7: Continuing Education and Career Progression</b></p>
+                                <p>
+                                    - Continuing Education:<br>
+                                    Stay informed about industry trends, technological advancements, and emerging best practices.<br>
+                                    - Advanced Certifications:<br>
+                                    Pursue advanced certifications or designations that enhance your expertise.<br>
+                                    - Management and Executive Roles:<br>
+                                    Aim for higher-level roles, such as partner in a law firm, senior partner in an accounting firm, or director in an engineering firm.
+                                </p>
+                            </section>
+
+                            <!-- Optional Major Advice section -->
+                            <section id="secondgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Optional Major Advice</h2></header>
+
+                                <p>
+                                    1. Law (Legal Services):<br>
+                                    Bachelor of Laws (LLB)<br>
+                                    2. Accounting (Accounting and Financial Services):<br>
+                                    Bachelor of Commerce (Accounting)<br>
+                                    3. Engineering (Engineering Services):<br>
+                                    Bachelor of Engineering<br>
+                                    4. Information Technology (IT Consulting):<br>
+                                    Bachelor of Information Technology (Various Specializations<br>
+                                    6. Science (Scientific Research and Consulting)<br>
+                                    Bachelor of Science (Various Specializations)<br>
+                                    7. Economics (Economic Consulting)<br>
+                                    Bachelor of Economics<br>
+                                    8. Environmental Science (Environmental Consulting):<br>
+                                    Bachelor of Environmental Science<br>
+                                    9. Psychology (Psychological Services):<br>
+                                    Bachelor of Psychology<br>
+                                    10. Social Work (Social Services):<br>
+                                    Bachelor of Social Work<br>
+                                    11. Architecture (Architectural Services):<br>
+                                    Bachelor of Architecture<br>
+                                    12. Health Science (Healthcare Consulting):<br>
+                                    Bachelor of Health Science<br>
+                                    13. Mathematics and Statistics (Data Analysis and Actuarial Services):<br>
+                                    Bachelor of Mathematics and Statistics<br>
+                                    14. Environmental Engineering (Environmental Consulting):<br>
+                                    Bachelor of Environmental Engineering:<br>
+                                    15. Geographic Information Systems (GIS):<br>
+                                    Bachelor of Science in Geographic Information Systems<br>
+                                </p>
+                            </section>
+
+                            <!-- Save Report section -->
+                            <section id="contact" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Save Report</h2></header>
+                                <p>
+                                    Click the button below to save a pdf report to your local storage.
+                                </p>
+                                <div class="row">
+                                    <div class="col-lg-6 tm-contact-right">
+                                        <a type="submit" class="float-right tm-button" href="/pdf/Professional, scientific & technical services.pdf" download="Professional, scientific & technical services.pdf">Generate!</a>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <!-- Return to XSalary Home -->
+                            <section id="thirdgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Now you can return to XSalary Homepage</h2></header>
+                                <div class="center-container">
+                                    <a href="../home.html" class="tm-button tm-button-wide">Home</a>
+                                </div>
+
+                                <!-- Create a canvas element on which the fireworks will be drawn -->
+                                <canvas id="fireworks"></canvas>
+                                <script>
+                                    // Get the canvas element and its drawing context
+                                    const canvas = document.getElementById('fireworks');
+                                    const ctx = canvas.getContext('2d');
+
+                                    // Set the canvas size to full screen
+                                    canvas.width = window.innerWidth;
+                                    canvas.height = window.innerHeight;
+
+                                    // Define the Particle class for the explosion particles
+                                    class Particle {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Random initial velocity
+                                            this.velocity = {
+                                                x: (Math.random() - 0.5) * 8,
+                                                y: (Math.random() - 0.5) * 8
+                                            };
+                                            this.alpha = 1; // Opacity of the particle
+                                            this.friction = 0.99; // Friction to slow down particles
+                                        }
+
+                                        // Draw a particle on the canvas
+                                        draw() {
+                                            ctx.globalAlpha = this.alpha;
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Update the particle position and opacity
+                                        update() {
+                                            this.velocity.x *= this.friction;
+                                            this.velocity.y *= this.friction;
+                                            this.x += this.velocity.x;
+                                            this.y += this.velocity.y;
+                                            this.alpha -= 0.01; // Fade out the particle
+                                        }
+                                    }
+
+                                    // Define the Firework class for the rockets
+                                    class Firework {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Initial upward velocity
+                                            this.velocity = { x: 0, y: Math.random() * -2.5 - 0.5 };
+                                            this.particles = []; // Particles for explosion
+                                            this.lifespan = 180; // Time before explosion
+                                            this.hasExploded = false; // Track if the firework has exploded
+                                        }
+
+                                        // Draw the firework rocket on the canvas
+                                        draw() {
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 3, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Create particles for explosion
+                                        explode() {
+                                            for (let i = 0; i < 50; i++) {
+                                                this.particles.push(new Particle(this.x, this.y, this.color));
+                                            }
+                                        }
+
+                                        // Update the firework position, check for explosion
+                                        update() {
+                                            this.lifespan--;
+
+                                            // Check if the firework should explode
+                                            if (this.lifespan <= 0 && !this.hasExploded) {
+                                                this.explode();
+                                                this.velocity = { x: 0, y: 0 };
+                                                this.hasExploded = true;
+                                            } else if (this.lifespan > 0) {
+                                                this.y += this.velocity.y;
+                                            }
+
+                                            // Update and draw particles
+                                            for (let i = 0; i < this.particles.length; i++) {
+                                                this.particles[i].update();
+                                                this.particles[i].draw();
+                                            }
+                                        }
+                                    }
+
+                                    // Array to store the fireworks
+                                    let fireworks = [];
+
+                                    // Function to animate the fireworks
+                                    function animate() {
+                                        // Request the next animation frame
+                                        requestAnimationFrame(animate);
+
+                                        // Clear the canvas and create a trailing effect
+                                        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+                                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                                        // Update and draw each firework
+                                        fireworks.forEach((firework, index) => {
+                                            firework.update();
+                                            firework.draw();
+
+                                            // Remove fireworks that have finished exploding
+                                            if (firework.lifespan <= 0 && firework.particles.every(p => p.alpha <= 0)) {
+                                                fireworks.splice(index, 1);
+                                            }
+                                        });
+
+                                        // Occasionally create a new firework
+                                        if (Math.random() < 0.015) {
+                                            const x = Math.random() * canvas.width;
+                                            const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                                            fireworks.push(new Firework(x, canvas.height, color));
+                                        }
+                                    }
+
+                                    // Start the animation
+                                    animate();
+                                </script>
+
+                                <div class="tm-gallery-container tm-gallery-3">
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-11.jpg"><img src="/img/neaty-11.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-12.jpg"><img src="/img/neaty-12.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-13.jpg"><img src="/img/neaty-13.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-14.jpg"><img src="/img/neaty-14.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <footer>
+                                <p class="tm-copyright-p"> &copy; 2023 IDers(TP22). All rights reserved. </p>
+                            </footer>
+                        </div>  
+                        
+                    </div> <!-- Right column: content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+                
+        <!-- load JS files -->
+        <script src="/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="/js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script>     
+       
+            $(document).ready(function(){
+
+                // Single page nav
+                $('.tm-main-nav').singlePageNav({
+                    'currentClass' : "active",
+                    offset : 20
+                });
+
+                // Magnific pop up
+                $('.tm-gallery-1').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-2').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-3').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-current-year').text(new Date().getFullYear());                
+            });
+        </script>             
+</body>
+</html>

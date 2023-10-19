@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .tm-main-nav {
+            overflow-y: auto;
+            height: 380px;  /* Adjust height as necessary */
+        }
+        .tm-main-nav::-webkit-scrollbar {
+            display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+        .tm-main-nav {
+            -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none;  /* Hide scrollbar for Firefox */
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* This line is not strictly necessary unless you also want to vertically center the button, but it's often used with justify-content for full centering */
+            height: 100%; /* You can adjust this as needed or remove it if you don't want to set a specific height */
+        }
+        .tm-button.tm-button-wide {
+            border-radius: 5px; /* This will give the button rounded corners */
+            margin-bottom: 20px; /* This will add space below the button */
+        }
+    </style>
+
+    <title>Wholesale Trade</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="/css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <!-- Left column: logo and menu -->
+                    <div class="tm-blue-bg tm-left-column">                        
+                        <div class="tm-logo-div text-xs-center">
+                            <img src="/img/slogo.png" alt="Logo">
+                            <h1 class="tm-site-name">Wholesale Trade</h1>
+                        </div>
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                                <li class="tm-nav-item">
+                                    <a href="#welcome" class="tm-nav-item-link">Skill Set</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#about" class="tm-nav-item-link">Core Skills</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#galleryone" class="tm-nav-item-link">Skill Tree</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#secondgallery" class="tm-nav-item-link">Optional Major Advice</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#contact" class="tm-nav-item-link">Save Report</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#thirdgallery" class="tm-nav-item-link">Return to XSalary Home</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <script>
+                            const navElement = document.getElementById('autoScrollNav');
+                            let isScrolling = false;
+
+                            navElement.addEventListener('mousemove', function(event) {
+                                // Define the threshold distance from the edges (e.g., 20px)
+                                const threshold = 20;
+
+                                // Check if the mouse is close to the top or bottom of the navigation menu
+                                const nearTop = event.offsetY <= threshold;
+                                const nearBottom = event.offsetY >= navElement.clientHeight - threshold;
+
+                                // Scroll the menu if the mouse is near the top or bottom
+                                if (nearTop && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(-1); // Scroll up
+                                } else if (nearBottom && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(1);  // Scroll down
+                                } else if (!nearTop && !nearBottom) {
+                                    isScrolling = false; // Stop scrolling if the mouse is away from the edges
+                                }
+                            });
+
+                            function scrollMenu(direction) {
+                                if (isScrolling) {
+                                    navElement.scrollTop += 5 * direction; // 5 is the number of pixels to scroll per frame; adjust as needed
+                                    setTimeout(() => scrollMenu(direction), 30); // 30ms delay between scrolls; adjust as needed
+                                }
+                            }
+                        </script>
+                    </div> <!-- Left column: logo and menu -->
+                    
+                    <!-- Right column: content -->
+                    <div class="tm-right-column">
+                        <figure>
+                            <img src="/img/tree.jpg" alt="Header image" class="img-fluid">
+                        </figure>
+
+                        <div class="tm-content-div">
+                            <!-- Welcome section -->
+                            <section id="welcome" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Skill Set</h2>
+                                </header>
+                                <p>This is the last section of XSalary.<br>With the personality test and salary analysis all done, you should be pretty confident about your future career choices. This bonus part of XSalary is about required skills in the decided industry area. We offer a skill tree to let you get started from basic level all the way to the advanced level. You can also find useful information about the major to choose if you wish to take further education to gain the skills. In addition to this, you can choose to generate the skill set and careers support to a pdf report and save it to your local harddrive. So you can check our tips, advice and recommendations anytime, anywhere!<br>Hope our careers support will help you achieve a glorious future!</p>
+                            </section>
+                            <!-- Core Skills section -->
+                            <section id="about" class="tm-section">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 push-lg-4 push-md-5">
+                                        <header>
+                                            <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Core Skills</h2>
+                                        </header>
+                                        <p>
+                                            <b>Product Knowledge:</b><br>
+                                            Market Research: Understand market trends, customer preferences, and competitors in your industry.<br>
+                                            Product Expertise: Develop in-depth knowledge of the products you are selling or distributing.<br>
+
+                                            <b>Sales and Marketing:</b><br>
+                                            Sales Techniques: Hone your sales skills, including prospecting, negotiation, and closing deals.<br>
+                                            Marketing Strategies: Understand marketing methods to promote products and reach potential customers.<br>
+
+                                            <b>Customer Relationship Management:</b><br>
+                                            Customer Service: Provide excellent customer service to build and maintain strong client relationships.<br>
+                                            Account Management: Manage accounts, handle inquiries, and address customer concerns.<br>
+
+                                            <b>Supply Chain Management:</b><br>
+                                            Inventory Management: Optimize inventory levels to ensure products are available when needed.<br>
+                                            Logistics: Understand logistics and distribution processes to manage timely deliveries.<br>
+
+                                            <b>Financial Acumen:</b><br>
+                                            Budgeting: Develop budgeting skills for managing expenses and pricing products competitively.<br>
+                                            Financial Analysis: Analyze financial data and sales reports to make informed decisions.<br>
+
+                                            <b>Data Analysis:</b><br>
+                                            Market Data Analysis: Use data analytics to identify market trends, assess customer behavior, and make data-driven decisions.<br>
+                                            Demand Forecasting: Predict demand for products and plan accordingly.<br>
+
+                                            <b>Negotiation and Communication:</b><br>
+                                            Negotiation Skills: Negotiate terms with suppliers, customers, and partners to secure favorable agreements.<br>
+                                            Effective Communication: Communicate clearly with team members, clients, and partners.<br>
+
+                                            <b>International Trade Knowledge:</b><br>
+                                            Import and Export Regulations: Understand international trade regulations, tariffs, and customs procedures if involved in global wholesale trade.<br>
+                                            Currency Exchange: Learn about currency exchange rates and foreign exchange markets.<br>
+
+                                            <b>Legal and Contractual Understanding:</b><br>
+                                            Contract Management: Draft and manage contracts, including purchase agreements, distribution contracts, and service agreements.<br>
+                                            Legal Compliance: Ensure compliance with relevant trade laws and regulations.<br>
+
+                                            <b>E-commerce and Technology:</b><br>
+                                            E-commerce Platforms: Familiarize yourself with online selling platforms and digital marketing strategies.<br>
+                                            Technology Adoption: Embrace technology for efficient order processing, inventory management, and data analysis.<br>
+
+                                            <b>Problem-Solving:</b><br>
+                                            Resolve Issues: Develop problem-solving skills to address supply chain disruptions, delivery delays, and customer complaints.<br>
+                                            Risk Management: Identify and mitigate risks associated with wholesale trade, such as inventory shortages or market fluctuations.<br>
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
+                                        <img src="/img/05.jpg" alt="Image" class="img-fluid">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Skill Tree section -->
+                            <section id="galleryone" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Skill Tree</h2></header>
+                                <p><b>Level 1: Foundation Skills (Wholesale Trade Industry)</b></p>
+                                <p>
+                                    - Product Knowledge: Develop a foundational understanding of the products you will be dealing with in wholesale trade. Knowledge of the products you're selling is crucial for effective communication with customers and suppliers.<br>
+                                    - Customer Service Basics: Learn essential customer service skills for interacting with clients and addressing their needs. Providing excellent customer service is essential in building and maintaining client relationships.<br>
+                                    - Communication Skills: Develop effective communication skills for collaborating with customers and suppliers. Strong communication skills are vital in wholesale trade to convey information clearly and negotiate effectively.<br>
+                                    - Adaptability: Be prepared to adapt to changing market conditions and customer demands. The wholesale industry often experiences fluctuations in demand and market dynamics, so adaptability is crucial.<br>
+                                    - Inventory Management: Understand the basics of inventory management and tracking. Managing inventory efficiently is key to meeting customer demand while minimizing holding costs.
+                                </p>
+                                <p><b>Level 2: Core Skills (Wholesale Trade Industry)</b></p>
+                                <p>
+                                    - Supply Chain Management: Gain an understanding of supply chain processes and logistics.<br>
+                                    - Sales and Negotiation: Develop sales skills and negotiation techniques for securing deals.<br>
+                                    - Financial Analysis: Learn to analyze financial data and make informed decisions.<br>
+                                    - Relationship Building: Build and maintain strong relationships with suppliers and customers.<br>
+                                    - Market Research: Conduct market research to identify trends and opportunities.
+                                </p>
+                                <p><b>Level 3: Specialized Skills (Wholesale Trade Industry)</b></p>
+                                <p>
+                                    - Advanced Product Knowledge: Specialize in in-depth knowledge of specific product categories.<br>
+                                    - Strategic Procurement: Develop strategies for sourcing products at competitive prices.<br>
+                                    - Sales Strategy: Create and implement sales strategies tailored to your market.<br>
+                                    - Data Analytics: Use data analytics tools to gain insights into market trends and customer behavior.<br>
+                                    - International Trade: Specialize in international trade, including import/export regulations.
+                                </p>
+                                <p><b>Level 4: Advanced Skills (Wholesale Trade Industry)</b></p>
+                                <p>
+                                    - Expertise in a Niche Market: Specialize in a niche market segment within wholesale trade.<br>
+                                    - Sales Leadership: Assume leadership roles in sales teams or departments.<br>
+                                    - Financial Management: Manage financial aspects of wholesale operations, including budgeting and forecasting.<br>
+                                    - Strategic Planning: Develop and execute strategic plans for business growth.<br>
+                                    - Risk Management: Assess and mitigate risks associated with supply chain and market fluctuations.
+                                </p>
+                                <p><b>Level 5: Licensing and Certification (Wholesale Trade Industry)</b></p>
+                                <p>
+                                    - Obtain Relevant Industry Licenses and Certifications (e.g., Certified Professional in Supply Management).<br>
+                                    - Regulatory Compliance: Ensure compliance with industry regulations and trade laws.<br>
+                                    - Quality Assurance Certification: Obtain certifications related to quality control and assurance.<br>
+                                    - Trade Finance Certification: If involved in international trade, consider trade finance certifications.
+                                </p>
+                                <p><b>Level 6: Continuing Education and Specialization (Wholesale Trade Industry)</b></p>
+                                <p>
+                                    - Continuous Learning: Stay updated on industry trends, new products, and market dynamics.<br>
+                                    - Advanced Education: Pursue advanced degrees (e.g., MBA) or specialized certifications in supply chain or business management.<br>
+                                    - Ongoing Industry Training: Attend industry-specific training and conferences.<br>
+                                    - Specialization: Focus on a particular product category or market segment.<br>
+                                    - Research and Publications: Contribute to industry knowledge through research and publications.
+                                </p>
+                            </section>
+
+                            <!-- Optional Major Advice section -->
+                            <section id="secondgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Optional Major Advice</h2></header>
+                                <p>Choosing the right major can significantly impact your career in wholesale trade. Here are some recommended majors and fields of study:</p>
+
+                                <p>
+                                    Business Administration: A degree in Business Administration provides a broad foundation in business management, marketing, finance, and operations, making it versatile for wholesale trade roles.<br>
+
+                                    Supply Chain Management: This major focuses on optimizing supply chain operations, logistics, and inventory management, which are critical in wholesale trade.<br>
+
+                                    Marketing: A Marketing major can be beneficial for roles involving product promotion, market research, and digital marketing in wholesale trade.<br>
+
+                                    International Business: If you plan to engage in global wholesale trade, a major in International Business provides insights into international trade regulations, foreign markets, and cultural considerations.<br>
+
+                                    E-commerce and Digital Marketing: In the age of online commerce, majors related to e-commerce and digital marketing can be advantageous for wholesale trade, especially if you are involved in online sales.<br>
+
+                                    Finance or Accounting: These majors can be useful for roles involving financial analysis, budgeting, and pricing strategies in wholesale trade.<br>
+
+                                    Data Science or Data Analytics: For roles involving data analysis, demand forecasting, and market research, majors related to data science or data analytics can be relevant.<br>
+
+                                    Negotiation and Conflict Resolution: A major or coursework in negotiation and conflict resolution can enhance your ability to negotiate favorable agreements and resolve disputes in wholesale trade.<br>
+
+                                    Legal Studies or Contract Management: If your role involves contract drafting and management, a major in Legal Studies or Contract Management can be beneficial.<br>
+
+                                    International Relations or Political Science: For careers involving international trade negotiations and understanding global political dynamics, consider majors related to international relations or political science.
+                                </p>
+                            </section>
+
+                            <!-- Save Report section -->
+                            <section id="contact" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Save Report</h2></header>
+                                <p>
+                                    Click the button below to save a pdf report to your local storage.
+                                </p>
+                                <div class="row">
+                                    <div class="col-lg-6 tm-contact-right">
+                                        <a type="submit" class="float-right tm-button" href="/pdf/Wholesale Trade.pdf" download="Wholesale Trade.pdf">Generate!</a>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <!-- Return to XSalary Home -->
+                            <section id="thirdgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Now you can return to XSalary Homepage</h2></header>
+                                <div class="center-container">
+                                    <a href="../home.html" class="tm-button tm-button-wide">Home</a>
+                                </div>
+
+                                <!-- Create a canvas element on which the fireworks will be drawn -->
+                                <canvas id="fireworks"></canvas>
+                                <script>
+                                    // Get the canvas element and its drawing context
+                                    const canvas = document.getElementById('fireworks');
+                                    const ctx = canvas.getContext('2d');
+
+                                    // Set the canvas size to full screen
+                                    canvas.width = window.innerWidth;
+                                    canvas.height = window.innerHeight;
+
+                                    // Define the Particle class for the explosion particles
+                                    class Particle {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Random initial velocity
+                                            this.velocity = {
+                                                x: (Math.random() - 0.5) * 8,
+                                                y: (Math.random() - 0.5) * 8
+                                            };
+                                            this.alpha = 1; // Opacity of the particle
+                                            this.friction = 0.99; // Friction to slow down particles
+                                        }
+
+                                        // Draw a particle on the canvas
+                                        draw() {
+                                            ctx.globalAlpha = this.alpha;
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Update the particle position and opacity
+                                        update() {
+                                            this.velocity.x *= this.friction;
+                                            this.velocity.y *= this.friction;
+                                            this.x += this.velocity.x;
+                                            this.y += this.velocity.y;
+                                            this.alpha -= 0.01; // Fade out the particle
+                                        }
+                                    }
+
+                                    // Define the Firework class for the rockets
+                                    class Firework {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Initial upward velocity
+                                            this.velocity = { x: 0, y: Math.random() * -2.5 - 0.5 };
+                                            this.particles = []; // Particles for explosion
+                                            this.lifespan = 180; // Time before explosion
+                                            this.hasExploded = false; // Track if the firework has exploded
+                                        }
+
+                                        // Draw the firework rocket on the canvas
+                                        draw() {
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 3, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Create particles for explosion
+                                        explode() {
+                                            for (let i = 0; i < 50; i++) {
+                                                this.particles.push(new Particle(this.x, this.y, this.color));
+                                            }
+                                        }
+
+                                        // Update the firework position, check for explosion
+                                        update() {
+                                            this.lifespan--;
+
+                                            // Check if the firework should explode
+                                            if (this.lifespan <= 0 && !this.hasExploded) {
+                                                this.explode();
+                                                this.velocity = { x: 0, y: 0 };
+                                                this.hasExploded = true;
+                                            } else if (this.lifespan > 0) {
+                                                this.y += this.velocity.y;
+                                            }
+
+                                            // Update and draw particles
+                                            for (let i = 0; i < this.particles.length; i++) {
+                                                this.particles[i].update();
+                                                this.particles[i].draw();
+                                            }
+                                        }
+                                    }
+
+                                    // Array to store the fireworks
+                                    let fireworks = [];
+
+                                    // Function to animate the fireworks
+                                    function animate() {
+                                        // Request the next animation frame
+                                        requestAnimationFrame(animate);
+
+                                        // Clear the canvas and create a trailing effect
+                                        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+                                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                                        // Update and draw each firework
+                                        fireworks.forEach((firework, index) => {
+                                            firework.update();
+                                            firework.draw();
+
+                                            // Remove fireworks that have finished exploding
+                                            if (firework.lifespan <= 0 && firework.particles.every(p => p.alpha <= 0)) {
+                                                fireworks.splice(index, 1);
+                                            }
+                                        });
+
+                                        // Occasionally create a new firework
+                                        if (Math.random() < 0.015) {
+                                            const x = Math.random() * canvas.width;
+                                            const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                                            fireworks.push(new Firework(x, canvas.height, color));
+                                        }
+                                    }
+
+                                    // Start the animation
+                                    animate();
+                                </script>
+
+                                <div class="tm-gallery-container tm-gallery-3">
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-11.jpg"><img src="/img/neaty-11.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-12.jpg"><img src="/img/neaty-12.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-13.jpg"><img src="/img/neaty-13.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-14.jpg"><img src="/img/neaty-14.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <footer>
+                                <p class="tm-copyright-p"> &copy; 2023 IDers(TP22). All rights reserved. </p>
+                            </footer>
+                        </div>  
+                        
+                    </div> <!-- Right column: content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+                
+        <!-- load JS files -->
+        <script src="/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="/js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script>     
+       
+            $(document).ready(function(){
+
+                // Single page nav
+                $('.tm-main-nav').singlePageNav({
+                    'currentClass' : "active",
+                    offset : 20
+                });
+
+                // Magnific pop up
+                $('.tm-gallery-1').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-2').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-3').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-current-year').text(new Date().getFullYear());                
+            });
+        </script>             
+</body>
+</html>

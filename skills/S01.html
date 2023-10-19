@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .tm-main-nav {
+            overflow-y: auto;
+            height: 380px;  /* Adjust height as necessary */
+        }
+        .tm-main-nav::-webkit-scrollbar {
+            display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+        .tm-main-nav {
+            -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none;  /* Hide scrollbar for Firefox */
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* This line is not strictly necessary unless you also want to vertically center the button, but it's often used with justify-content for full centering */
+            height: 100%; /* You can adjust this as needed or remove it if you don't want to set a specific height */
+        }
+        .tm-button.tm-button-wide {
+            border-radius: 5px; /* This will give the button rounded corners */
+            margin-bottom: 20px; /* This will add space below the button */
+        }
+    </style>
+
+    <title>Mining</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="/css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <!-- Left column: logo and menu -->
+                    <div class="tm-blue-bg tm-left-column">                        
+                        <div class="tm-logo-div text-xs-center">
+                            <img src="/img/slogo.png" alt="Logo">
+                            <h1 class="tm-site-name">Mining</h1>
+                        </div>
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                                <li class="tm-nav-item">
+                                    <a href="#welcome" class="tm-nav-item-link">Skill Set</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#about" class="tm-nav-item-link">Core Skills</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#galleryone" class="tm-nav-item-link">Skill Tree</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#secondgallery" class="tm-nav-item-link">Optional Major Advice</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#contact" class="tm-nav-item-link">Save Report</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#thirdgallery" class="tm-nav-item-link">Return to XSalary Home</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <script>
+                            const navElement = document.getElementById('autoScrollNav');
+                            let isScrolling = false;
+
+                            navElement.addEventListener('mousemove', function(event) {
+                                // Define the threshold distance from the edges (e.g., 20px)
+                                const threshold = 20;
+
+                                // Check if the mouse is close to the top or bottom of the navigation menu
+                                const nearTop = event.offsetY <= threshold;
+                                const nearBottom = event.offsetY >= navElement.clientHeight - threshold;
+
+                                // Scroll the menu if the mouse is near the top or bottom
+                                if (nearTop && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(-1); // Scroll up
+                                } else if (nearBottom && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(1);  // Scroll down
+                                } else if (!nearTop && !nearBottom) {
+                                    isScrolling = false; // Stop scrolling if the mouse is away from the edges
+                                }
+                            });
+
+                            function scrollMenu(direction) {
+                                if (isScrolling) {
+                                    navElement.scrollTop += 5 * direction; // 5 is the number of pixels to scroll per frame; adjust as needed
+                                    setTimeout(() => scrollMenu(direction), 30); // 30ms delay between scrolls; adjust as needed
+                                }
+                            }
+                        </script>
+                    </div> <!-- Left column: logo and menu -->
+                    
+                    <!-- Right column: content -->
+                    <div class="tm-right-column">
+                        <figure>
+                            <img src="/img/tree.jpg" alt="Header image" class="img-fluid">
+                        </figure>
+
+                        <div class="tm-content-div">
+                            <!-- Welcome section -->
+                            <section id="welcome" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Skill Set</h2>
+                                </header>
+                                <p>This is the last section of XSalary.<br>With the personality test and salary analysis all done, you should be pretty confident about your future career choices. This bonus part of XSalary is about required skills in the decided industry area. We offer a skill tree to let you get started from basic level all the way to the advanced level. You can also find useful information about the major to choose if you wish to take further education to gain the skills. In addition to this, you can choose to generate the skill set and careers support to a pdf report and save it to your local harddrive. So you can check our tips, advice and recommendations anytime, anywhere!<br>Hope our careers support will help you achieve a glorious future!</p>
+                            </section>
+                            <!-- Core Skills section -->
+                            <section id="about" class="tm-section">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 push-lg-4 push-md-5">
+                                        <header>
+                                            <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Core Skills</h2>
+                                        </header>
+                                        <p>
+                                            <b>Geological and Geotechnical Skills:</b><br>
+                                            Geological Mapping: Understand geological formations and identify mineral deposits.<br>
+                                            Geotechnical Analysis: Assess the stability of excavation sites and recommend appropriate engineering measures.<br>
+                                            Mineral Exploration: Locate potential mining sites using geological knowledge.<br>
+
+                                            <b>Mining Engineering Skills:</b><br>
+                                            Mine Planning: Develop safe and efficient plans for mineral extraction.<br>
+                                            Mining Methods: Learn various mining methods, including open-pit, underground, and placer mining.<br>
+                                            Mine Safety: Ensure compliance with safety regulations to protect workers.<br>
+
+                                            <b>Environmental Management:</b><br>
+                                            Environmental Regulations: Stay informed about environmental laws and regulations for mining operations.<br>
+                                            Reclamation: Plan land rehabilitation and ecosystem restoration after mining activities cease.<br>
+                                            Sustainability: Promote sustainable mining practices to minimize environmental impact.<br>
+
+                                            <b>Mineral Processing:</b><br>
+                                            Mineral Extraction: Understand processes like crushing, grinding, and chemical extraction to separate minerals from ore.<br>
+                                            Metallurgy: Study the physical and chemical properties of minerals for efficient processing.<br>
+
+                                            <b>Health and Safety:</b><br>
+                                            Occupational Health: Ensure miners' well-being through regular health checks and safety measures.<br>
+                                            Emergency Response: Prepare for emergencies like cave-ins or gas leaks with comprehensive response plans.<br>
+
+                                            <b>Project Management:</b><br>
+                                            Cost Control: Manage budgets and control costs to maximize profitability.<br>
+                                            Timeline Management: Ensure projects are completed on schedule.<br>
+
+                                            <b>Equipment Operation and Maintenance:</b><br>
+                                            Heavy Machinery Operation: Learn to operate mining equipment safely and efficiently.<br>
+                                            Maintenance Skills: Understand the maintenance requirements of mining machinery.<br>
+
+                                            <b>Surveying and Mapping:</b><br>
+                                            Topographic Surveys: Create accurate maps of mining sites to guide operations.<br>
+                                            GPS and GIS: Utilize technology for precise location data.<br>
+
+                                            <b>Communication and Collaboration:</b><br>
+                                            Teamwork: Collaborate with diverse teams, including engineers, geologists, and environmental specialists.<br>
+                                            Stakeholder Relations: Communicate effectively with local communities, government agencies, and investors.<br>
+
+                                            <b>Legal and Regulatory Knowledge:</b><br>
+                                            Mining Laws: Stay updated on mining laws and regulations to ensure compliance.<br>
+                                            Permitting: Understand the process of obtaining permits for mining operations.<br>
+
+                                            <b>Risk Assessment and Management:</b><br>
+                                            Risk Analysis: Identify potential risks in mining operations and develop mitigation strategies.<br>
+                                            Contingency Planning: Be prepared for unforeseen challenges like equipment breakdowns or adverse weather.<br>
+
+                                            <b>Data Analysis and Technology:</b><br>
+                                            Data Analytics: Analyze geological and operational data to optimize mining processes.<br>
+                                            Automation and Robotics: Embrace technology to improve safety and efficiency.<br>
+
+                                            <b>Financial Acumen:</b><br>
+                                            Budgeting: Develop and manage budgets effectively.<br>
+                                            Financial Analysis: Understand financial statements and ROI calculations.<br>
+
+                                            <b>Community Engagement:</b><br>
+                                            Community Relations: Build positive relationships with local communities through transparency and corporate social responsibility initiatives.<br>
+
+                                            <b>Professional Development:</b><br>
+                                            Continual Learning: Stay updated on industry trends, technologies, and best practices through workshops, courses, and certifications.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
+                                        <img src="/img/01.jpg" alt="Image" class="img-fluid">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Skill Tree section -->
+                            <section id="galleryone" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Skill Tree</h2></header>
+                                <p>This specialized skill tree for the mining industry outlines a progression from foundational skills to advanced expertise, including the acquisition of necessary licenses and certifications, and a focus on specialization and ongoing education within the mining sector. Please note that the specifics of each level can vary based on your role and career goals within the mining industry.</p>
+                                <p><b>Level 1: Foundation Skills (Mining Industry)</b></p>
+                                <p>
+                                    - Safety Awareness<br>
+                                    - Basic Geological Concepts<br>
+                                    - Basic Equipment Operation<br>
+                                    - Communication Skills<br>
+                                    - Time Management<br>
+                                    - Adaptability<br>
+                                    - Basic Computer Literacy
+                                </p>
+                                <p><b>Level 2: Core Skills (Mining Industry)</b></p>
+                                <p>
+                                    - Mining Safety Protocols<br>
+                                    - Geological Exploration Techniques<br>
+                                    - Equipment Maintenance<br>
+                                    - Teamwork and Collaboration<br>
+                                    - Basic Mining Engineering<br>
+                                    - Basic Environmental Awareness<br>
+                                    - Project Coordination in Mining
+                                </p>
+                                <p><b>Level 3: Specialized Skills (Mining Industry)</b></p>
+                                <p>
+                                    - Advanced Geological Surveying<br>
+                                    - Drilling and Blasting Techniques<br>
+                                    - Mine Planning and Design<br>
+                                    - Environmental Impact Assessment<br>
+                                    - Ore Processing Methods<br>
+                                    - Advanced Equipment Operation<br>
+                                    - Advanced Safety Management
+                                </p>
+                                <p><b>Level 4: Advanced Skills (Mining Industry)</b></p>
+                                <p>
+                                    - Expertise in a Specific Mining Discipline (e.g., metallurgy, geotechnical engineering)<br>
+                                    - Mine Optimization and Efficiency<br>
+                                    - Leadership in Mining Operations<br>
+                                    - Strategic Mine Planning<br>
+                                    - Health and Safety Leadership<br>
+                                    - Risk Assessment and Mitigation<br>
+                                    - Environmental Sustainability in Mining
+                                </p>
+                                <p><b>Level 5: Licensing and Certification (Mining Industry)</b></p>
+                                <p>
+                                    - Obtain Relevant Mining Industry Licenses and Certifications (e.g., Mine Manager Certification)<br>
+                                    - Compliance with Mining Regulations<br>
+                                    - Safety Certification<br>
+                                    - Environmental Compliance Certification<br>
+                                    - Project Management Certification<br>
+                                    - Leadership and Management Certifications
+                                </p>
+                                <p><b>Level 6: Continuing Education and Specialization (Mining Industry)</b></p>
+                                <p>
+                                    - Continuous Learning and Skill Development in Mining<br>
+                                    - Advanced Education (e.g., Master's or PhD in Mining Engineering or Geology)<br>
+                                    - Ongoing Industry Training (e.g., advanced safety training)<br>
+                                    - Specialization in a Mining Niche (e.g., underground mining, mineral processing)<br>
+                                    - Advanced Certifications in Specialized Mining Fields<br>
+                                    - Research and Publications in Mining Industry
+                                </p>
+                            </section>
+
+                            <!-- Optional Major Advice section -->
+                            <section id="secondgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Optional Major Advice</h2></header>
+                                <p>Choosing the right major can significantly impact your career in the mining industry. Here are some recommended majors and fields of study:</p>
+
+                                <p>
+                                    Mining Engineering: Pursue a degree in Mining Engineering to gain comprehensive knowledge of mining methods, mine design, and safety protocols. This major provides a strong foundation for a mining career.<br>
+
+                                    Geology: A major in Geology is ideal for those interested in mineral exploration and geological mapping. Geologists play a crucial role in locating valuable mineral deposits.<br>
+
+                                    Environmental Science: Consider Environmental Science if you are passionate about sustainable mining practices and want to focus on minimizing the environmental impact of mining operations.<br>
+
+                                    Metallurgical Engineering: This major is suitable for those interested in mineral processing and metallurgy, essential for extracting valuable minerals from ore.<br>
+
+                                    Civil Engineering: Civil Engineering can be beneficial for individuals interested in geotechnical analysis and designing infrastructure for mining projects.<br>
+
+                                    Business Administration: If you aspire to work in mining management or want to understand the financial aspects of mining operations, a degree in Business Administration can be valuable.<br>
+
+                                    Safety and Health Management: Pursue a major in Safety and Health Management to specialize in occupational health and safety within the mining industry.<br>
+
+                                    Environmental Management: For those interested in environmental compliance and reclamation efforts, an Environmental Management major is a great choice.<br>
+
+                                    Data Science or Mining Technology: In the age of automation and data-driven decision-making, majors related to data science or mining technology can be highly relevant, especially for roles involving data analysis and technology integration.<br>
+
+                                    Mineral Economics: This major focuses on the economic aspects of the mining industry, including mineral market analysis and resource valuation.
+                                </p>
+                            </section>
+
+                            <!-- Save Report section -->
+                            <section id="contact" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Save Report</h2></header>
+                                <p>
+                                    Click the button below to save a pdf report to your local storage.
+                                </p>
+                                <div class="row">
+                                    <div class="col-lg-6 tm-contact-right">
+                                        <a type="submit" class="float-right tm-button" href="/pdf/Mining.pdf" download="Mining.pdf">Generate!</a>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <!-- Return to XSalary Home -->
+                            <section id="thirdgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Now you can return to XSalary Homepage</h2></header>
+                                <div class="center-container">
+                                    <a href="../home.html" class="tm-button tm-button-wide">Home</a>
+                                </div>
+
+                                <!-- Create a canvas element on which the fireworks will be drawn -->
+                                <canvas id="fireworks"></canvas>
+                                <script>
+                                    // Get the canvas element and its drawing context
+                                    const canvas = document.getElementById('fireworks');
+                                    const ctx = canvas.getContext('2d');
+
+                                    // Set the canvas size to full screen
+                                    canvas.width = window.innerWidth;
+                                    canvas.height = window.innerHeight;
+
+                                    // Define the Particle class for the explosion particles
+                                    class Particle {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Random initial velocity
+                                            this.velocity = {
+                                                x: (Math.random() - 0.5) * 8,
+                                                y: (Math.random() - 0.5) * 8
+                                            };
+                                            this.alpha = 1; // Opacity of the particle
+                                            this.friction = 0.99; // Friction to slow down particles
+                                        }
+
+                                        // Draw a particle on the canvas
+                                        draw() {
+                                            ctx.globalAlpha = this.alpha;
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Update the particle position and opacity
+                                        update() {
+                                            this.velocity.x *= this.friction;
+                                            this.velocity.y *= this.friction;
+                                            this.x += this.velocity.x;
+                                            this.y += this.velocity.y;
+                                            this.alpha -= 0.01; // Fade out the particle
+                                        }
+                                    }
+
+                                    // Define the Firework class for the rockets
+                                    class Firework {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Initial upward velocity
+                                            this.velocity = { x: 0, y: Math.random() * -2.5 - 0.5 };
+                                            this.particles = []; // Particles for explosion
+                                            this.lifespan = 180; // Time before explosion
+                                            this.hasExploded = false; // Track if the firework has exploded
+                                        }
+
+                                        // Draw the firework rocket on the canvas
+                                        draw() {
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 3, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Create particles for explosion
+                                        explode() {
+                                            for (let i = 0; i < 50; i++) {
+                                                this.particles.push(new Particle(this.x, this.y, this.color));
+                                            }
+                                        }
+
+                                        // Update the firework position, check for explosion
+                                        update() {
+                                            this.lifespan--;
+
+                                            // Check if the firework should explode
+                                            if (this.lifespan <= 0 && !this.hasExploded) {
+                                                this.explode();
+                                                this.velocity = { x: 0, y: 0 };
+                                                this.hasExploded = true;
+                                            } else if (this.lifespan > 0) {
+                                                this.y += this.velocity.y;
+                                            }
+
+                                            // Update and draw particles
+                                            for (let i = 0; i < this.particles.length; i++) {
+                                                this.particles[i].update();
+                                                this.particles[i].draw();
+                                            }
+                                        }
+                                    }
+
+                                    // Array to store the fireworks
+                                    let fireworks = [];
+
+                                    // Function to animate the fireworks
+                                    function animate() {
+                                        // Request the next animation frame
+                                        requestAnimationFrame(animate);
+
+                                        // Clear the canvas and create a trailing effect
+                                        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+                                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                                        // Update and draw each firework
+                                        fireworks.forEach((firework, index) => {
+                                            firework.update();
+                                            firework.draw();
+
+                                            // Remove fireworks that have finished exploding
+                                            if (firework.lifespan <= 0 && firework.particles.every(p => p.alpha <= 0)) {
+                                                fireworks.splice(index, 1);
+                                            }
+                                        });
+
+                                        // Occasionally create a new firework
+                                        if (Math.random() < 0.015) {
+                                            const x = Math.random() * canvas.width;
+                                            const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                                            fireworks.push(new Firework(x, canvas.height, color));
+                                        }
+                                    }
+
+                                    // Start the animation
+                                    animate();
+                                </script>
+
+                                <div class="tm-gallery-container tm-gallery-3">
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-11.jpg"><img src="/img/neaty-11.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-12.jpg"><img src="/img/neaty-12.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-13.jpg"><img src="/img/neaty-13.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-14.jpg"><img src="/img/neaty-14.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <footer>
+                                <p class="tm-copyright-p"> &copy; 2023 IDers(TP22). All rights reserved. </p>
+                            </footer>
+                        </div>  
+                        
+                    </div> <!-- Right column: content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+                
+        <!-- load JS files -->
+        <script src="/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="/js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script>     
+       
+            $(document).ready(function(){
+
+                // Single page nav
+                $('.tm-main-nav').singlePageNav({
+                    'currentClass' : "active",
+                    offset : 20
+                });
+
+                // Magnific pop up
+                $('.tm-gallery-1').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-2').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-3').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-current-year').text(new Date().getFullYear());                
+            });
+        </script>             
+</body>
+</html>

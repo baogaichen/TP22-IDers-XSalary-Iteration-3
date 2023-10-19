@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .tm-main-nav {
+            overflow-y: auto;
+            height: 380px;  /* Adjust height as necessary */
+        }
+        .tm-main-nav::-webkit-scrollbar {
+            display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+        .tm-main-nav {
+            -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none;  /* Hide scrollbar for Firefox */
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* This line is not strictly necessary unless you also want to vertically center the button, but it's often used with justify-content for full centering */
+            height: 100%; /* You can adjust this as needed or remove it if you don't want to set a specific height */
+        }
+        .tm-button.tm-button-wide {
+            border-radius: 5px; /* This will give the button rounded corners */
+            margin-bottom: 20px; /* This will add space below the button */
+        }
+    </style>
+
+    <title>Retail Trade</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="/css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <!-- Left column: logo and menu -->
+                    <div class="tm-blue-bg tm-left-column">                        
+                        <div class="tm-logo-div text-xs-center">
+                            <img src="/img/slogo.png" alt="Logo">
+                            <h1 class="tm-site-name">Retail Trade</h1>
+                        </div>
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                                <li class="tm-nav-item">
+                                    <a href="#welcome" class="tm-nav-item-link">Skill Set</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#about" class="tm-nav-item-link">Core Skills</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#galleryone" class="tm-nav-item-link">Skill Tree</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#secondgallery" class="tm-nav-item-link">Optional Major Advice</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#contact" class="tm-nav-item-link">Save Report</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#thirdgallery" class="tm-nav-item-link">Return to XSalary Home</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <script>
+                            const navElement = document.getElementById('autoScrollNav');
+                            let isScrolling = false;
+
+                            navElement.addEventListener('mousemove', function(event) {
+                                // Define the threshold distance from the edges (e.g., 20px)
+                                const threshold = 20;
+
+                                // Check if the mouse is close to the top or bottom of the navigation menu
+                                const nearTop = event.offsetY <= threshold;
+                                const nearBottom = event.offsetY >= navElement.clientHeight - threshold;
+
+                                // Scroll the menu if the mouse is near the top or bottom
+                                if (nearTop && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(-1); // Scroll up
+                                } else if (nearBottom && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(1);  // Scroll down
+                                } else if (!nearTop && !nearBottom) {
+                                    isScrolling = false; // Stop scrolling if the mouse is away from the edges
+                                }
+                            });
+
+                            function scrollMenu(direction) {
+                                if (isScrolling) {
+                                    navElement.scrollTop += 5 * direction; // 5 is the number of pixels to scroll per frame; adjust as needed
+                                    setTimeout(() => scrollMenu(direction), 30); // 30ms delay between scrolls; adjust as needed
+                                }
+                            }
+                        </script>
+                    </div> <!-- Left column: logo and menu -->
+                    
+                    <!-- Right column: content -->
+                    <div class="tm-right-column">
+                        <figure>
+                            <img src="/img/tree.jpg" alt="Header image" class="img-fluid">
+                        </figure>
+
+                        <div class="tm-content-div">
+                            <!-- Welcome section -->
+                            <section id="welcome" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Skill Set</h2>
+                                </header>
+                                <p>This is the last section of XSalary.<br>With the personality test and salary analysis all done, you should be pretty confident about your future career choices. This bonus part of XSalary is about required skills in the decided industry area. We offer a skill tree to let you get started from basic level all the way to the advanced level. You can also find useful information about the major to choose if you wish to take further education to gain the skills. In addition to this, you can choose to generate the skill set and careers support to a pdf report and save it to your local harddrive. So you can check our tips, advice and recommendations anytime, anywhere!<br>Hope our careers support will help you achieve a glorious future!</p>
+                            </section>
+                            <!-- Core Skills section -->
+                            <section id="about" class="tm-section">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 push-lg-4 push-md-5">
+                                        <header>
+                                            <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Core Skills</h2>
+                                        </header>
+                                        <p>
+                                            <b>Customer Service:</b><br>
+                                            Customer Engagement: Provide exceptional customer service and build positive relationships with shoppers.<br>
+                                            Problem-Solving: Resolve customer complaints and issues effectively.<br>
+
+                                            <b>Product Knowledge:</b><br>
+                                            Product Expertise: Develop a deep understanding of the products you are selling, including features, benefits, and variations.<br>
+                                            Market Trends: Stay updated on market trends and consumer preferences in your industry.<br>
+
+                                            <b>Sales and Merchandising:</b><br>
+                                            Sales Techniques: Hone your sales skills, including upselling, cross-selling, and product recommendations.<br>
+                                            Visual Merchandising: Learn how to create attractive product displays and store layouts.<br>
+
+                                            <b>Inventory Management:</b><br>
+                                            Stock Control: Manage inventory levels to ensure products are in stock and readily available.<br>
+                                            Inventory Analysis: Use data to optimize inventory turnover and reduce carrying costs.<br>
+
+                                            <b>E-commerce and Digital Marketing:</b><br>
+                                            Online Retailing: Familiarize yourself with e-commerce platforms and online sales strategies.<br>
+                                            Digital Marketing: Understand digital marketing channels, such as social media, email marketing, and search engine optimization (SEO).<br>
+
+                                            <b>Cash Handling and Financial Transactions:</b><br>
+                                            Cash Management: Learn how to handle cash, process transactions accurately, and maintain financial records.<br>
+                                            Point-of-Sale (POS) Systems: Be proficient in using POS systems for sales and inventory tracking.<br>
+
+                                            <b>Visual and Communication Skills:</b><br>
+                                            Effective Communication: Communicate clearly with customers, colleagues, and management.<br>
+                                            Visual Communication: Use visual aids, signage, and displays to convey information to shoppers.<br>
+
+                                            <b>Teamwork:</b><br>
+                                            Team Collaboration: Work effectively with your retail team to achieve sales targets and provide excellent service.<br>
+                                            Conflict Resolution: Resolve conflicts that may arise among team members.<br>
+
+                                            <b>Marketing and Promotion:</b><br>
+                                            Promotional Strategies: Understand retail marketing tactics, such as discounts, promotions, and loyalty programs.<br>
+                                            Customer Engagement: Engage customers through in-store events, social media, and other marketing initiatives.<br>
+
+                                            <b>Data Analysis:</b><br>
+                                            Sales Data Analysis: Analyze sales data to identify trends, popular products, and opportunities for improvement.<br>
+                                            Customer Insights: Use data to understand customer behavior and tailor marketing efforts.<br>
+
+                                            <b>Inventory Planning and Demand Forecasting:</b><br>
+                                            Demand Analysis: Forecast demand for products to ensure adequate stock levels.<br>
+                                            Seasonal Planning: Plan for seasonal trends and promotions.<br>
+
+                                            <b>Loss Prevention:</b><br>
+                                            Security Awareness: Understand security protocols to prevent theft and ensure store safety.<br>
+                                            Loss Prevention Strategies: Implement loss prevention measures to protect inventory and assets.<br>
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
+                                        <img src="/img/06.jpg" alt="Image" class="img-fluid">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Skill Tree section -->
+                            <section id="galleryone" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Skill Tree</h2></header>
+                                <p>This specialized skill tree for the mining industry outlines a progression from foundational skills to advanced expertise, including the acquisition of necessary licenses and certifications, and a focus on specialization and ongoing education within the mining sector. Please note that the specifics of each level can vary based on your role and career goals within the mining industry.</p>
+                                <p><b>Level 1: Foundation Skills (Retail Trade Industry)</b></p>
+                                <p>
+                                    - Product Knowledge: Develop a foundational understanding of the products you will be selling in retail. Knowledge of the products you're selling is crucial for effective customer assistance and sales.<br>
+                                    - Customer Service Basics: Learn essential customer service skills for interacting with shoppers and addressing their needs. Providing excellent customer service is a cornerstone of success in retail.<br>
+                                    - Communication Skills: Develop effective communication skills for assisting customers and collaborating with colleagues. Strong communication skills are vital for conveying information clearly and assisting customers effectively.<br>
+                                    - Adaptability: Be prepared to adapt to changing customer preferences, market trends, and inventory. Retail often requires quick adaptation to changing market conditions and customer demands.<br>
+                                    - Inventory Management: Understand the basics of inventory control, stocking, and restocking. Efficiently managing inventory is essential to maintaining product availability and minimizing costs.
+                                </p>
+                                <p><b>Level 2: Core Skills (Retail Trade Industry)</b></p>
+                                <p>
+                                    - Sales Techniques: Develop sales skills and techniques for assisting customers and closing sales.<br>
+                                    - Visual Merchandising: Learn principles of visual merchandising for effective product displays.<br>
+                                    - Point of Sale (POS) Systems: Familiarize yourself with POS systems and cashier procedures.<br>
+                                    - Teamwork: Collaborate effectively with retail colleagues and management.<br>
+                                    - Loss Prevention: Understand loss prevention techniques to reduce theft and inventory shrinkage.
+                                </p>
+                                <p><b>Level 3: Specialized Skills (Retail Trade Industry)</b></p>
+                                <p>
+                                    - Product Expertise: Specialize in in-depth knowledge of specific product categories or brands.<br>
+                                    - Store Operations: Gain expertise in managing day-to-day store operations and staff.<br>
+                                    - Retail Analytics: Utilize data analytics tools to analyze sales trends and customer behavior.<br>
+                                    - Retail Marketing: Develop marketing skills for promoting products and driving sales.<br>
+                                    - E-commerce and Online Retail: Specialize in online retail operations and digital marketing.
+
+                                </p>
+                                <p><b>Level 4: Advanced Skills (Retail Trade Industry)</b></p>
+                                <p>
+                                    - Store Management: Assume management roles, overseeing retail operations, and staff.<br>
+                                    - Customer Relationship Management (CRM): Implement CRM strategies to build and retain customer loyalty.<br>
+                                    - Financial Management: Manage financial aspects of the retail business, including budgeting and profit analysis.<br>
+                                    - Strategic Planning: Develop and execute strategic plans for retail business growth.<br>
+                                    - Vendor Management: Build and maintain relationships with suppliers and negotiate favorable terms.
+                                </p>
+                                <p><b>Level 5: Licensing and Certification (Retail Trade Industry)</b></p>
+                                <p>
+                                    - Obtain Relevant Industry Certifications (e.g., Retail Management Certification).<br>
+                                    - Regulatory Compliance: Ensure compliance with retail industry regulations, such as consumer protection laws.<br>
+                                    - Loss Prevention Certification: Attain certifications related to loss prevention and security.<br>
+                                    - E-commerce Certifications: If involved in online retail, consider e-commerce and digital marketing certifications.
+                                </p>
+                                <p><b>Level 6: Continuing Education and Specialization (Retail Trade Industry)</b></p>
+                                <p>
+                                    - Continuous Learning: Stay updated on industry trends, new retail technologies, and consumer behavior.<br>
+                                    - Advanced Education: Pursue advanced degrees (e.g., MBA) or specialized certifications in retail management.<br>
+                                    - Ongoing Industry Training: Attend retail-focused training programs, workshops, and conferences.<br>
+                                    - Specialization: Focus on a specific aspect of retail (e.g., luxury retail, sustainable retail).<br>
+                                    - Research and Publications: Contribute to industry knowledge through research and publications.
+                                </p>
+                            </section>
+
+                            <!-- Optional Major Advice section -->
+                            <section id="secondgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Optional Major Advice</h2></header>
+                                <p>Choosing the right major can significantly impact your career in retail trade. Here are some recommended majors and fields of study:</p>
+
+                                <p>
+                                    Retail Management: Pursue a degree in Retail Management for a comprehensive understanding of retail operations, merchandising, and customer service.<br>
+
+                                    Business Administration: A degree in Business Administration provides a broad foundation in business management, marketing, finance, and operations, making it versatile for retail trade roles.<br>
+
+                                    Marketing: A Marketing major can be beneficial for roles involving product promotion, market research, and digital marketing in the retail sector.<br>
+
+                                    E-commerce and Digital Marketing: In the age of online retail, majors related to e-commerce and digital marketing can be advantageous, especially if you are involved in online sales.<br>
+
+                                    Fashion Merchandising: Consider a major in Fashion Merchandising if you are interested in the fashion retail industry. This major focuses on trends, visual merchandising, and product selection.<br>
+
+                                    Supply Chain Management: This major can be valuable for roles involving inventory management, demand forecasting, and logistics in the retail industry.<br>
+
+                                    Finance or Accounting: These majors can be useful for roles involving financial analysis, budgeting, and pricing strategies in retail.<br>
+
+                                    Consumer Psychology: For a deeper understanding of consumer behavior and decision-making, consider a major in Consumer Psychology.<br>
+
+                                    Data Science or Data Analytics: For roles involving data analysis, demand forecasting, and customer insights in retail, majors related to data science or data analytics can be relevant.<br>
+
+                                    Communication or Public Relations: These majors are beneficial for careers in retail marketing, visual merchandising, and customer engagement.<br>
+
+                                    Hospitality Management: If you are interested in retail within the context of the hospitality industry (e.g., hotel gift shops), a major in Hospitality Management may be relevant.
+                                </p>
+                            </section>
+
+                            <!-- Save Report section -->
+                            <section id="contact" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Save Report</h2></header>
+                                <p>
+                                    Click the button below to save a pdf report to your local storage.
+                                </p>
+                                <div class="row">
+                                    <div class="col-lg-6 tm-contact-right">
+                                        <a type="submit" class="float-right tm-button" href="/pdf/Retail Trade.pdf" download="Retail Trade.pdf">Generate!</a>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <!-- Return to XSalary Home -->
+                            <section id="thirdgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Now you can return to XSalary Homepage</h2></header>
+                                <div class="center-container">
+                                    <a href="../home.html" class="tm-button tm-button-wide">Home</a>
+                                </div>
+
+                                <!-- Create a canvas element on which the fireworks will be drawn -->
+                                <canvas id="fireworks"></canvas>
+                                <script>
+                                    // Get the canvas element and its drawing context
+                                    const canvas = document.getElementById('fireworks');
+                                    const ctx = canvas.getContext('2d');
+
+                                    // Set the canvas size to full screen
+                                    canvas.width = window.innerWidth;
+                                    canvas.height = window.innerHeight;
+
+                                    // Define the Particle class for the explosion particles
+                                    class Particle {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Random initial velocity
+                                            this.velocity = {
+                                                x: (Math.random() - 0.5) * 8,
+                                                y: (Math.random() - 0.5) * 8
+                                            };
+                                            this.alpha = 1; // Opacity of the particle
+                                            this.friction = 0.99; // Friction to slow down particles
+                                        }
+
+                                        // Draw a particle on the canvas
+                                        draw() {
+                                            ctx.globalAlpha = this.alpha;
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Update the particle position and opacity
+                                        update() {
+                                            this.velocity.x *= this.friction;
+                                            this.velocity.y *= this.friction;
+                                            this.x += this.velocity.x;
+                                            this.y += this.velocity.y;
+                                            this.alpha -= 0.01; // Fade out the particle
+                                        }
+                                    }
+
+                                    // Define the Firework class for the rockets
+                                    class Firework {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Initial upward velocity
+                                            this.velocity = { x: 0, y: Math.random() * -2.5 - 0.5 };
+                                            this.particles = []; // Particles for explosion
+                                            this.lifespan = 180; // Time before explosion
+                                            this.hasExploded = false; // Track if the firework has exploded
+                                        }
+
+                                        // Draw the firework rocket on the canvas
+                                        draw() {
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 3, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Create particles for explosion
+                                        explode() {
+                                            for (let i = 0; i < 50; i++) {
+                                                this.particles.push(new Particle(this.x, this.y, this.color));
+                                            }
+                                        }
+
+                                        // Update the firework position, check for explosion
+                                        update() {
+                                            this.lifespan--;
+
+                                            // Check if the firework should explode
+                                            if (this.lifespan <= 0 && !this.hasExploded) {
+                                                this.explode();
+                                                this.velocity = { x: 0, y: 0 };
+                                                this.hasExploded = true;
+                                            } else if (this.lifespan > 0) {
+                                                this.y += this.velocity.y;
+                                            }
+
+                                            // Update and draw particles
+                                            for (let i = 0; i < this.particles.length; i++) {
+                                                this.particles[i].update();
+                                                this.particles[i].draw();
+                                            }
+                                        }
+                                    }
+
+                                    // Array to store the fireworks
+                                    let fireworks = [];
+
+                                    // Function to animate the fireworks
+                                    function animate() {
+                                        // Request the next animation frame
+                                        requestAnimationFrame(animate);
+
+                                        // Clear the canvas and create a trailing effect
+                                        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+                                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                                        // Update and draw each firework
+                                        fireworks.forEach((firework, index) => {
+                                            firework.update();
+                                            firework.draw();
+
+                                            // Remove fireworks that have finished exploding
+                                            if (firework.lifespan <= 0 && firework.particles.every(p => p.alpha <= 0)) {
+                                                fireworks.splice(index, 1);
+                                            }
+                                        });
+
+                                        // Occasionally create a new firework
+                                        if (Math.random() < 0.015) {
+                                            const x = Math.random() * canvas.width;
+                                            const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                                            fireworks.push(new Firework(x, canvas.height, color));
+                                        }
+                                    }
+
+                                    // Start the animation
+                                    animate();
+                                </script>
+
+                                <div class="tm-gallery-container tm-gallery-3">
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-11.jpg"><img src="/img/neaty-11.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-12.jpg"><img src="/img/neaty-12.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-13.jpg"><img src="/img/neaty-13.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-14.jpg"><img src="/img/neaty-14.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <footer>
+                                <p class="tm-copyright-p"> &copy; 2023 IDers(TP22). All rights reserved. </p>
+                            </footer>
+                        </div>  
+                        
+                    </div> <!-- Right column: content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+                
+        <!-- load JS files -->
+        <script src="/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="/js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script>     
+       
+            $(document).ready(function(){
+
+                // Single page nav
+                $('.tm-main-nav').singlePageNav({
+                    'currentClass' : "active",
+                    offset : 20
+                });
+
+                // Magnific pop up
+                $('.tm-gallery-1').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-2').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-3').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-current-year').text(new Date().getFullYear());                
+            });
+        </script>             
+</body>
+</html>

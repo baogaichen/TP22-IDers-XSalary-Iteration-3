@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .tm-main-nav {
+            overflow-y: auto;
+            height: 380px;  /* Adjust height as necessary */
+        }
+        .tm-main-nav::-webkit-scrollbar {
+            display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+        .tm-main-nav {
+            -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none;  /* Hide scrollbar for Firefox */
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* This line is not strictly necessary unless you also want to vertically center the button, but it's often used with justify-content for full centering */
+            height: 100%; /* You can adjust this as needed or remove it if you don't want to set a specific height */
+        }
+        .tm-button.tm-button-wide {
+            border-radius: 5px; /* This will give the button rounded corners */
+            margin-bottom: 20px; /* This will add space below the button */
+        }
+    </style>
+
+    <title>Arts & Recreation Services</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="/css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <!-- Left column: logo and menu -->
+                    <div class="tm-blue-bg tm-left-column">                        
+                        <div class="tm-logo-div text-xs-center">
+                            <img src="/img/slogo.png" alt="Logo">
+                            <h1 class="tm-site-name">Arts & Recreation Services</h1>
+                        </div>
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                                <li class="tm-nav-item">
+                                    <a href="#welcome" class="tm-nav-item-link">Skill Set</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#about" class="tm-nav-item-link">Core Skills</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#galleryone" class="tm-nav-item-link">Skill Tree</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#secondgallery" class="tm-nav-item-link">Optional Major Advice</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#contact" class="tm-nav-item-link">Save Report</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#thirdgallery" class="tm-nav-item-link">Return to XSalary Home</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <script>
+                            const navElement = document.getElementById('autoScrollNav');
+                            let isScrolling = false;
+
+                            navElement.addEventListener('mousemove', function(event) {
+                                // Define the threshold distance from the edges (e.g., 20px)
+                                const threshold = 20;
+
+                                // Check if the mouse is close to the top or bottom of the navigation menu
+                                const nearTop = event.offsetY <= threshold;
+                                const nearBottom = event.offsetY >= navElement.clientHeight - threshold;
+
+                                // Scroll the menu if the mouse is near the top or bottom
+                                if (nearTop && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(-1); // Scroll up
+                                } else if (nearBottom && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(1);  // Scroll down
+                                } else if (!nearTop && !nearBottom) {
+                                    isScrolling = false; // Stop scrolling if the mouse is away from the edges
+                                }
+                            });
+
+                            function scrollMenu(direction) {
+                                if (isScrolling) {
+                                    navElement.scrollTop += 5 * direction; // 5 is the number of pixels to scroll per frame; adjust as needed
+                                    setTimeout(() => scrollMenu(direction), 30); // 30ms delay between scrolls; adjust as needed
+                                }
+                            }
+                        </script>
+                    </div> <!-- Left column: logo and menu -->
+                    
+                    <!-- Right column: content -->
+                    <div class="tm-right-column">
+                        <figure>
+                            <img src="/img/tree.jpg" alt="Header image" class="img-fluid">
+                        </figure>
+
+                        <div class="tm-content-div">
+                            <!-- Welcome section -->
+                            <section id="welcome" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Skill Set</h2>
+                                </header>
+                                <p>This is the last section of XSalary.<br>With the personality test and salary analysis all done, you should be pretty confident about your future career choices. This bonus part of XSalary is about required skills in the decided industry area. We offer a skill tree to let you get started from basic level all the way to the advanced level. You can also find useful information about the major to choose if you wish to take further education to gain the skills. In addition to this, you can choose to generate the skill set and careers support to a pdf report and save it to your local harddrive. So you can check our tips, advice and recommendations anytime, anywhere!<br>Hope our careers support will help you achieve a glorious future!</p>
+                            </section>
+                            <!-- Core Skills section -->
+                            <section id="about" class="tm-section">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 push-lg-4 push-md-5">
+                                        <header>
+                                            <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Core Skills</h2>
+                                        </header>
+                                        <p>
+                                            <b>Creative and Artistic Skills:</b><br>
+                                            Artistic Talent: Cultivate your artistic skills, whether in visual arts (painting, sculpture), performing arts (music, dance, theater), or other creative disciplines.<br>
+                                            Creativity: Develop your ability to generate innovative ideas and approaches to artistic and recreational activities.<br>
+                                            Technical Proficiency: Depending on your specific role, become proficient with the tools and equipment relevant to your artistic discipline (e.g., musical instruments, art supplies, theater lighting).<br>
+                                            Performance Skills: If you're pursuing a career in performing arts, focus on honing your performance skills, such as acting, singing, or dancing.<br>
+
+                                            <b>Organizational and Administrative Skills:</b><br>
+                                            Event Planning: Learn event planning and management skills for organizing exhibitions, performances, festivals, and recreational activities.<br>
+                                            Time Management: Efficiently manage schedules, rehearsals, and performances or events.<br>
+                                            Budgeting and Financial Management: Develop budgeting skills for managing costs associated with arts and recreation programs or events.<br>
+
+                                            <b>Communication and Collaboration:</b><br>
+                                            Communication Skills: Communicate effectively with team members, artists, performers, and event attendees.<br>
+                                            Collaboration: Work collaboratively with artists, directors, choreographers, or other professionals involved in arts and recreation projects.<br>
+                                            Negotiation: If you're involved in contracts or event planning, improve your negotiation skills.<br>
+
+                                            <b>Marketing and Promotion:</b><br>
+                                            Marketing and Promotion: Understand marketing strategies and promotional techniques to attract audiences and participants.<br>
+                                            Social Media and Digital Marketing: Stay updated with digital marketing trends, especially for promoting events and activities online.<br>
+
+                                            <b>Audience Engagement:</b><br>
+                                            Audience Interaction: Learn how to engage and interact with diverse audiences during performances or events.<br>
+                                            Customer Service: Provide excellent customer service to attendees and participants.<br>
+
+                                            <b>Technical and Production Skills:</b><br>
+                                            Technical Production (for theater and performance roles):<br>
+                                            Familiarize yourself with technical aspects of theater production, including lighting, sound, and stage management.<br>
+                                            Sound and Audio Production (for music and performance roles):<br>
+                                            Develop skills in sound recording, mixing, and audio production.<br>
+                                            Set and Stage Design (for theater and exhibition roles):<br>
+                                            Learn the art of designing and creating sets and stages for performances and exhibitions.<br>
+                                            Physical Fitness and Endurance (for certain roles):<br>
+                                            Physical Fitness: For roles in sports or physical recreation, maintain good physical fitness and health.<br>
+                                            Coaching and Instruction (for sports and fitness roles):<br>
+                                            Gain expertise in coaching and instructing participants in sports and fitness activities.<br>
+
+                                            <b>Safety and Emergency Response:</b><br>
+                                            First Aid and CPR Certification: Acquire first aid and cardiopulmonary resuscitation (CPR) certification, especially for roles involving physical activities.<br>
+                                            Safety Protocols: Follow safety protocols and emergency response procedures, particularly for outdoor or adventurous recreation activities.<br>
+
+                                            <b>Adaptability and Problem-Solving:</b><br>
+                                            Adaptability: Be flexible and adaptable to changing circumstances during events or performances.<br>
+                                            Problem-Solving: Develop strong problem-solving skills to address unexpected challenges or issues.<br>
+
+                                            <b>Legal and Ethical Knowledge:</b><br>
+                                            Intellectual Property: Understand copyright, intellectual property, and licensing issues related to the arts.<br>
+                                            Ethical Conduct: Adhere to ethical standards and practices in the arts and recreation industry.<br>
+
+                                            <b>Cultural Awareness:</b><br>
+                                            Cultural Sensitivity: Respect and adapt to diverse cultural perspectives and artistic expressions.<br>
+                                            Heritage and Cultural Knowledge: If working with indigenous or heritage-related programs, gain knowledge about cultural preservation and respect.<br>
+                                            Language Skills: For roles involving non-English-speaking communities, language skills can be valuable.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
+                                        <img src="/img/17.jpg" alt="Image" class="img-fluid">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Skill Tree section -->
+                            <section id="galleryone" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Skill Tree</h2></header>
+                                <p><b>Level 1: Foundation Skills</b></p>
+                                <p>
+                                    - Educational Foundation:<br>
+                                    Enroll in a relevant bachelor's degree program (e.g., Bachelor of Fine Arts, Bachelor of Theater Arts, Bachelor of Event Management).
+                                </p>
+                                <p><b>Level 2: Core Skills</b></p>
+                                <p>
+                                    - Artistic Skills (for visual and performing arts roles):<br>
+                                    Develop foundational artistic skills in your chosen medium (e.g., painting, acting, music).<br>
+                                    - Technical Proficiency:<br>
+                                    Acquire technical skills and knowledge related to your artistic or recreational discipline (e.g., musical instrument proficiency, equipment operation).
+                                </p>
+                                <p><b>Level 3: Specialized Skills</b></p>
+                                <p>
+                                    - Artistic Specialization:<br>
+                                    Choose a specific area of artistic specialization (e.g., abstract painting, classical music performance, modern dance).<br>
+                                    - Event Planning and Management:<br>
+                                    Gain expertise in planning and managing events, exhibitions, or performances.<br>
+                                    - Recreation Specialization (for sports and recreation roles):<br>
+                                    Specialize in a particular sport or recreational activity.
+                                </p>
+                                <p><b>Level 4: Advanced Skills</b></p>
+                                <p>
+                                    - Advanced Education:<br>
+                                    Pursue a master's degree (e.g., Master of Fine Arts, Master of Event Management) or Ph.D. for advanced knowledge and research skills.<br>
+                                    - Artistic Mastery:<br>
+                                    Become a master in your chosen artistic discipline.<br>
+                                    - Leadership and Management:<br>
+                                    Develop leadership and management skills for roles in arts administration or event management.
+
+                                </p>
+                                <p><b>Level 5: Practical Experience</b></p>
+                                <p>
+                                    - Practical Training:<br>
+                                    Participate in internships, apprenticeships, or practical experiences in your field.<br>
+                                    - Performance or Exhibition (for performing or visual arts roles):<br>
+                                    Gain experience through public performances or exhibitions.
+                                </p>
+                                <p><b>Level 6: Advanced Roles and Specialization</b></p>
+                                <p>
+                                    - Leadership Roles:<br>
+                                    Pursue leadership roles such as director, curator, or event manager.<br>
+                                    - Specialized Certification:<br>
+                                    Obtain specialized certifications or endorsements, especially for sports coaching or specific art forms.
+                                </p>
+                                <p><b>Level 7: Continuing Education and Career Progression</b></p>
+                                <p>
+                                    - Continuing Education:<br>
+                                    Stay updated with artistic trends, event management techniques, or coaching strategies.<br>
+                                    - Professional Development:<br>
+                                    Attend workshops, seminars, and conferences relevant to your field.<br>
+                                    - Creative Innovation:<br>
+                                    Foster creativity and innovation in your work.
+                                </p>
+                            </section>
+
+                            <!-- Optional Major Advice section -->
+                            <section id="secondgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Optional Major Advice</h2></header>
+
+                                <p>
+                                    Visual Arts and Fine Arts:<br>
+                                    Bachelor of Fine Arts (BFA):<br>
+                                    Offers a comprehensive program in visual arts, including painting, sculpture, photography, and more.<br>
+                                    Bachelor of Design (B.Des):<br>
+                                    Focuses on design disciplines, such as graphic design, fashion design, industrial design, or interior design.<br>
+                                    Bachelor of Visual Communication (BVC):<br>
+                                    Specializes in visual communication and graphic design.<br>
+
+                                    Performing Arts:<br>
+                                    Bachelor of Arts in Theater Arts:<br>
+                                    Provides training in acting, directing, theater production, and theater history.<br>
+                                    Bachelor of Music (BMus):<br>
+                                    Focuses on music performance, composition, music theory, and music education.<br>
+                                    Bachelor of Dance:<br>
+                                    Offers training in dance techniques, choreography, and dance education.<br>
+
+                                    Event Management and Arts Administration:<br>
+                                    Bachelor of Arts in Arts Administration:<br>
+                                    Focuses on the management and administration of arts organizations and cultural events.<br>
+                                    Bachelor of Event Management:<br>
+                                    Specializes in event planning, coordination, and management.<br>
+
+                                    Sports and Recreation Management:<br>
+                                    Bachelor of Sport and Recreation Management:<br>
+                                    Provides education in sports management, sports marketing, and facility management.<br>
+
+                                    Cultural and Heritage Studies:<br>
+                                    Bachelor of Arts in Cultural Studies:<br>
+                                    Explores the cultural aspects of society, including art, literature, and popular culture.<br>
+                                    Bachelor of Cultural Heritage:<br>
+                                    Focuses on preserving and managing cultural heritage, including museums, historical sites, and archives.<br>
+
+                                    Digital Media and Entertainment:<br>
+
+                                    Bachelor of Interactive Media:<br>
+                                    Covers interactive media design, game development, and digital storytelling.<br>
+                                    Tourism and Hospitality Management:<br>
+
+                                    Bachelor of Tourism Management:<br>
+                                    Specializes in tourism planning, destination management, and hospitality operations.<br>
+
+                                    Recreation and Sports Coaching:<br>
+                                    Bachelor of Recreation and Sports Management:<br>
+                                    Focuses on recreational program planning, sports coaching, and fitness management.<br>
+
+                                    Outdoor Recreation and Adventure Education:<br>
+                                    Bachelor of Outdoor Education:<br>
+                                    Provides training in outdoor leadership, adventure education, and environmental education.<br>
+
+                                    Museum Studies:<br>
+                                    Bachelor of Museum Studies:<br>
+                                    Focuses on museum administration, collection management, and exhibition design.<br>
+
+                                    Cultural and Community Development:<br>
+                                    Bachelor of Community Development:<br>
+                                    Prepares students for roles in community and cultural development programs.<br>
+                                </p>
+                            </section>
+
+                            <!-- Save Report section -->
+                            <section id="contact" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Save Report</h2></header>
+                                <p>
+                                    Click the button below to save a pdf report to your local storage.
+                                </p>
+                                <div class="row">
+                                    <div class="col-lg-6 tm-contact-right">
+                                        <a type="submit" class="float-right tm-button" href="/pdf/Arts & recreation services.pdf" download="Arts & recreation services.pdf">Generate!</a>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <!-- Return to XSalary Home -->
+                            <section id="thirdgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Now you can return to XSalary Homepage</h2></header>
+                                <div class="center-container">
+                                    <a href="../home.html" class="tm-button tm-button-wide">Home</a>
+                                </div>
+
+                                <!-- Create a canvas element on which the fireworks will be drawn -->
+                                <canvas id="fireworks"></canvas>
+                                <script>
+                                    // Get the canvas element and its drawing context
+                                    const canvas = document.getElementById('fireworks');
+                                    const ctx = canvas.getContext('2d');
+
+                                    // Set the canvas size to full screen
+                                    canvas.width = window.innerWidth;
+                                    canvas.height = window.innerHeight;
+
+                                    // Define the Particle class for the explosion particles
+                                    class Particle {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Random initial velocity
+                                            this.velocity = {
+                                                x: (Math.random() - 0.5) * 8,
+                                                y: (Math.random() - 0.5) * 8
+                                            };
+                                            this.alpha = 1; // Opacity of the particle
+                                            this.friction = 0.99; // Friction to slow down particles
+                                        }
+
+                                        // Draw a particle on the canvas
+                                        draw() {
+                                            ctx.globalAlpha = this.alpha;
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Update the particle position and opacity
+                                        update() {
+                                            this.velocity.x *= this.friction;
+                                            this.velocity.y *= this.friction;
+                                            this.x += this.velocity.x;
+                                            this.y += this.velocity.y;
+                                            this.alpha -= 0.01; // Fade out the particle
+                                        }
+                                    }
+
+                                    // Define the Firework class for the rockets
+                                    class Firework {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Initial upward velocity
+                                            this.velocity = { x: 0, y: Math.random() * -2.5 - 0.5 };
+                                            this.particles = []; // Particles for explosion
+                                            this.lifespan = 180; // Time before explosion
+                                            this.hasExploded = false; // Track if the firework has exploded
+                                        }
+
+                                        // Draw the firework rocket on the canvas
+                                        draw() {
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 3, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Create particles for explosion
+                                        explode() {
+                                            for (let i = 0; i < 50; i++) {
+                                                this.particles.push(new Particle(this.x, this.y, this.color));
+                                            }
+                                        }
+
+                                        // Update the firework position, check for explosion
+                                        update() {
+                                            this.lifespan--;
+
+                                            // Check if the firework should explode
+                                            if (this.lifespan <= 0 && !this.hasExploded) {
+                                                this.explode();
+                                                this.velocity = { x: 0, y: 0 };
+                                                this.hasExploded = true;
+                                            } else if (this.lifespan > 0) {
+                                                this.y += this.velocity.y;
+                                            }
+
+                                            // Update and draw particles
+                                            for (let i = 0; i < this.particles.length; i++) {
+                                                this.particles[i].update();
+                                                this.particles[i].draw();
+                                            }
+                                        }
+                                    }
+
+                                    // Array to store the fireworks
+                                    let fireworks = [];
+
+                                    // Function to animate the fireworks
+                                    function animate() {
+                                        // Request the next animation frame
+                                        requestAnimationFrame(animate);
+
+                                        // Clear the canvas and create a trailing effect
+                                        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+                                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                                        // Update and draw each firework
+                                        fireworks.forEach((firework, index) => {
+                                            firework.update();
+                                            firework.draw();
+
+                                            // Remove fireworks that have finished exploding
+                                            if (firework.lifespan <= 0 && firework.particles.every(p => p.alpha <= 0)) {
+                                                fireworks.splice(index, 1);
+                                            }
+                                        });
+
+                                        // Occasionally create a new firework
+                                        if (Math.random() < 0.015) {
+                                            const x = Math.random() * canvas.width;
+                                            const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                                            fireworks.push(new Firework(x, canvas.height, color));
+                                        }
+                                    }
+
+                                    // Start the animation
+                                    animate();
+                                </script>
+
+                                <div class="tm-gallery-container tm-gallery-3">
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-11.jpg"><img src="/img/neaty-11.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-12.jpg"><img src="/img/neaty-12.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-13.jpg"><img src="/img/neaty-13.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-14.jpg"><img src="/img/neaty-14.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <footer>
+                                <p class="tm-copyright-p"> &copy; 2023 IDers(TP22). All rights reserved. </p>
+                            </footer>
+                        </div>  
+                        
+                    </div> <!-- Right column: content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+                
+        <!-- load JS files -->
+        <script src="/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="/js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script>     
+       
+            $(document).ready(function(){
+
+                // Single page nav
+                $('.tm-main-nav').singlePageNav({
+                    'currentClass' : "active",
+                    offset : 20
+                });
+
+                // Magnific pop up
+                $('.tm-gallery-1').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-2').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-3').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-current-year').text(new Date().getFullYear());                
+            });
+        </script>             
+</body>
+</html>

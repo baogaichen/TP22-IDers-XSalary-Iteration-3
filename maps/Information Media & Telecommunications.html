@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ca276c6319ef6f6242ec6dd1f3c6fcbe {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ca276c6319ef6f6242ec6dd1f3c6fcbe" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ca276c6319ef6f6242ec6dd1f3c6fcbe = L.map(
+                "map_ca276c6319ef6f6242ec6dd1f3c6fcbe",
+                {
+                    center: [-25.2744, 133.7751],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4737bf7d94330dcb7d722455e51f9f3b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+            var circle_marker_88a77f47de708825c3ca904720dad46b = L.circleMarker(
+                [-31.8402, 145.5639],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+        var popup_18681831822b5adb994cd5e6bd7fc001 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75b5ebe553de42ea68f911df243c3888 = $(`<div id="html_75b5ebe553de42ea68f911df243c3888" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: blue; font-size: 20px;">New South Wales</div><div style="text-align:center;">$2309/week</div>`)[0];
+                popup_18681831822b5adb994cd5e6bd7fc001.setContent(html_75b5ebe553de42ea68f911df243c3888);
+            
+        
+
+        circle_marker_88a77f47de708825c3ca904720dad46b.bindPopup(popup_18681831822b5adb994cd5e6bd7fc001)
+        ;
+
+        
+    
+    
+            var marker_b62c4b11455293d07214f16e3c5e99a2 = L.marker(
+                [-33.840199999999996, 143.5639],
+                {}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+            var div_icon_39188d150498f2812990d53ce2b01f27 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027color:blue; font-size:15px;\u0027\u003eNew South Wales\u003c/div\u003e"});
+            marker_b62c4b11455293d07214f16e3c5e99a2.setIcon(div_icon_39188d150498f2812990d53ce2b01f27);
+        
+    
+        var popup_3db3fa1b87ff3db1588aa3a1a1597418 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d88bf1afdcb600ef8c203ba31e7bc76 = $(`<div id="html_9d88bf1afdcb600ef8c203ba31e7bc76" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: blue; font-size: 20px;">New South Wales</div><div style="text-align:center;">$2309/week</div>`)[0];
+                popup_3db3fa1b87ff3db1588aa3a1a1597418.setContent(html_9d88bf1afdcb600ef8c203ba31e7bc76);
+            
+        
+
+        marker_b62c4b11455293d07214f16e3c5e99a2.bindPopup(popup_3db3fa1b87ff3db1588aa3a1a1597418)
+        ;
+
+        
+    
+    
+            var circle_marker_d49003e608863626b2b054a48d75be62 = L.circleMarker(
+                [-37.4713, 144.7852],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+        var popup_669c84b947c861c18be9cbbf37e6c594 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64dcbd8d5b0e92458a707affe60c3708 = $(`<div id="html_64dcbd8d5b0e92458a707affe60c3708" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: green; font-size: 20px;">Victoria</div><div style="text-align:center;">$2310/week</div>`)[0];
+                popup_669c84b947c861c18be9cbbf37e6c594.setContent(html_64dcbd8d5b0e92458a707affe60c3708);
+            
+        
+
+        circle_marker_d49003e608863626b2b054a48d75be62.bindPopup(popup_669c84b947c861c18be9cbbf37e6c594)
+        ;
+
+        
+    
+    
+            var marker_6ae26f697c3b605b02cfaaba83e9ce9f = L.marker(
+                [-39.4713, 142.7852],
+                {}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+            var div_icon_7f97b9ef71510f8f981302fa31be56d6 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027color:green; font-size:15px;\u0027\u003eVictoria\u003c/div\u003e"});
+            marker_6ae26f697c3b605b02cfaaba83e9ce9f.setIcon(div_icon_7f97b9ef71510f8f981302fa31be56d6);
+        
+    
+        var popup_8a3d02a802369d81e4f5121744c0887b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4fefaaaa34e9e7a1399d3d25f68dbac3 = $(`<div id="html_4fefaaaa34e9e7a1399d3d25f68dbac3" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: green; font-size: 20px;">Victoria</div><div style="text-align:center;">$2310/week</div>`)[0];
+                popup_8a3d02a802369d81e4f5121744c0887b.setContent(html_4fefaaaa34e9e7a1399d3d25f68dbac3);
+            
+        
+
+        marker_6ae26f697c3b605b02cfaaba83e9ce9f.bindPopup(popup_8a3d02a802369d81e4f5121744c0887b)
+        ;
+
+        
+    
+    
+            var circle_marker_6dc2d5f821c24592b4da83ee1b599bc5 = L.circleMarker(
+                [-20.9176, 142.7028],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+        var popup_581333283d186b48521971186b82d046 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9feae9b61a2989f9dc126f7bcdc5ce7 = $(`<div id="html_d9feae9b61a2989f9dc126f7bcdc5ce7" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: red; font-size: 20px;">Queensland</div><div style="text-align:center;">$2258/week</div>`)[0];
+                popup_581333283d186b48521971186b82d046.setContent(html_d9feae9b61a2989f9dc126f7bcdc5ce7);
+            
+        
+
+        circle_marker_6dc2d5f821c24592b4da83ee1b599bc5.bindPopup(popup_581333283d186b48521971186b82d046)
+        ;
+
+        
+    
+    
+            var marker_6e9b0ba71b2a7bc46471d5e1a2dbc9cf = L.marker(
+                [-22.9176, 140.7028],
+                {}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+            var div_icon_35c39a6086ff2e2410a07d2a4b66e217 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027color:red; font-size:15px;\u0027\u003eQueensland\u003c/div\u003e"});
+            marker_6e9b0ba71b2a7bc46471d5e1a2dbc9cf.setIcon(div_icon_35c39a6086ff2e2410a07d2a4b66e217);
+        
+    
+        var popup_0d8332a4f30de6c25ec8b1ddcc6703f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_82dee1b750e772dce77e204bb556c685 = $(`<div id="html_82dee1b750e772dce77e204bb556c685" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: red; font-size: 20px;">Queensland</div><div style="text-align:center;">$2258/week</div>`)[0];
+                popup_0d8332a4f30de6c25ec8b1ddcc6703f1.setContent(html_82dee1b750e772dce77e204bb556c685);
+            
+        
+
+        marker_6e9b0ba71b2a7bc46471d5e1a2dbc9cf.bindPopup(popup_0d8332a4f30de6c25ec8b1ddcc6703f1)
+        ;
+
+        
+    
+    
+            var circle_marker_2975694bb69673ac3d2dfac7ae3b807d = L.circleMarker(
+                [-30.0002, 136.2092],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+        var popup_a8c22d8078baafc6e487a6fea3259947 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ac6ae3190314346c9fae024a0b939c8 = $(`<div id="html_9ac6ae3190314346c9fae024a0b939c8" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: purple; font-size: 20px;">South Australia</div><div style="text-align:center;">$2115/week</div>`)[0];
+                popup_a8c22d8078baafc6e487a6fea3259947.setContent(html_9ac6ae3190314346c9fae024a0b939c8);
+            
+        
+
+        circle_marker_2975694bb69673ac3d2dfac7ae3b807d.bindPopup(popup_a8c22d8078baafc6e487a6fea3259947)
+        ;
+
+        
+    
+    
+            var marker_53adb9d11a27ab324792173bfca90b92 = L.marker(
+                [-32.0002, 134.2092],
+                {}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+            var div_icon_3eead259fb8ae89c430e30a455e5b21b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027color:purple; font-size:15px;\u0027\u003eSouth Australia\u003c/div\u003e"});
+            marker_53adb9d11a27ab324792173bfca90b92.setIcon(div_icon_3eead259fb8ae89c430e30a455e5b21b);
+        
+    
+        var popup_5b2cf095d5dcd02f0cffc8444bbfe228 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e39050ddaf82b5d03a5c974a5a825981 = $(`<div id="html_e39050ddaf82b5d03a5c974a5a825981" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: purple; font-size: 20px;">South Australia</div><div style="text-align:center;">$2115/week</div>`)[0];
+                popup_5b2cf095d5dcd02f0cffc8444bbfe228.setContent(html_e39050ddaf82b5d03a5c974a5a825981);
+            
+        
+
+        marker_53adb9d11a27ab324792173bfca90b92.bindPopup(popup_5b2cf095d5dcd02f0cffc8444bbfe228)
+        ;
+
+        
+    
+    
+            var circle_marker_ea9c1da03f847c3a506dca0f2c2c0a4b = L.circleMarker(
+                [-25.0423, 117.7932],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+        var popup_117ec113de47255e2516fd91837f2775 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a5f1ffd11d387d17d319daa4051e416 = $(`<div id="html_0a5f1ffd11d387d17d319daa4051e416" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: orange; font-size: 20px;">Western Australia</div><div style="text-align:center;">$2571/week</div>`)[0];
+                popup_117ec113de47255e2516fd91837f2775.setContent(html_0a5f1ffd11d387d17d319daa4051e416);
+            
+        
+
+        circle_marker_ea9c1da03f847c3a506dca0f2c2c0a4b.bindPopup(popup_117ec113de47255e2516fd91837f2775)
+        ;
+
+        
+    
+    
+            var marker_3291aa5323a0813b171b966c53482b55 = L.marker(
+                [-27.0423, 115.7932],
+                {}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+            var div_icon_0046b609bfb348cf04f7676e22771b5f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027color:orange; font-size:15px;\u0027\u003eWestern Australia\u003c/div\u003e"});
+            marker_3291aa5323a0813b171b966c53482b55.setIcon(div_icon_0046b609bfb348cf04f7676e22771b5f);
+        
+    
+        var popup_17ec07a3224adcadc6f5fe5c8c046539 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1f191f86170a4c716036b47e54486e3 = $(`<div id="html_c1f191f86170a4c716036b47e54486e3" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: orange; font-size: 20px;">Western Australia</div><div style="text-align:center;">$2571/week</div>`)[0];
+                popup_17ec07a3224adcadc6f5fe5c8c046539.setContent(html_c1f191f86170a4c716036b47e54486e3);
+            
+        
+
+        marker_3291aa5323a0813b171b966c53482b55.bindPopup(popup_17ec07a3224adcadc6f5fe5c8c046539)
+        ;
+
+        
+    
+    
+            var circle_marker_e8ff66b350f991d896cd2dd384c75b11 = L.circleMarker(
+                [-41.4545, 145.9707],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+        var popup_da98203fdd20b13d1422469fb0c163b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f0acac9fa4809a72ec93e63378456b54 = $(`<div id="html_f0acac9fa4809a72ec93e63378456b54" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: brown; font-size: 20px;">Tasmania</div><div style="text-align:center;">$2041/week</div>`)[0];
+                popup_da98203fdd20b13d1422469fb0c163b5.setContent(html_f0acac9fa4809a72ec93e63378456b54);
+            
+        
+
+        circle_marker_e8ff66b350f991d896cd2dd384c75b11.bindPopup(popup_da98203fdd20b13d1422469fb0c163b5)
+        ;
+
+        
+    
+    
+            var marker_c607e4e8f1440301af959219b4769c15 = L.marker(
+                [-43.4545, 143.9707],
+                {}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+            var div_icon_d67495a6afe93b30599f2f29905ec28d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027color:brown; font-size:15px;\u0027\u003eTasmania\u003c/div\u003e"});
+            marker_c607e4e8f1440301af959219b4769c15.setIcon(div_icon_d67495a6afe93b30599f2f29905ec28d);
+        
+    
+        var popup_2f76b5a36665354d3ec0b6faa5ded774 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f40fb217639de79ac4367b47ce495a29 = $(`<div id="html_f40fb217639de79ac4367b47ce495a29" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: brown; font-size: 20px;">Tasmania</div><div style="text-align:center;">$2041/week</div>`)[0];
+                popup_2f76b5a36665354d3ec0b6faa5ded774.setContent(html_f40fb217639de79ac4367b47ce495a29);
+            
+        
+
+        marker_c607e4e8f1440301af959219b4769c15.bindPopup(popup_2f76b5a36665354d3ec0b6faa5ded774)
+        ;
+
+        
+    
+    
+            var circle_marker_5fc3bb964dba295d406d3f12065ddf8d = L.circleMarker(
+                [-19.4914, 132.5509],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+        var popup_63481f4e46abc1147d635d9eaf589f79 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9e3ee1bac74d36a1368b896b8df841e = $(`<div id="html_e9e3ee1bac74d36a1368b896b8df841e" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: gray; font-size: 20px;">Northern Territory</div><div style="text-align:center;">$2239/week</div>`)[0];
+                popup_63481f4e46abc1147d635d9eaf589f79.setContent(html_e9e3ee1bac74d36a1368b896b8df841e);
+            
+        
+
+        circle_marker_5fc3bb964dba295d406d3f12065ddf8d.bindPopup(popup_63481f4e46abc1147d635d9eaf589f79)
+        ;
+
+        
+    
+    
+            var marker_20af5d9467a1903412dba81123b283fa = L.marker(
+                [-21.4914, 130.5509],
+                {}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+            var div_icon_a7586c7bb8cb980c8c8bb5acb871e3f1 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027color:gray; font-size:15px;\u0027\u003eNorthern Territory\u003c/div\u003e"});
+            marker_20af5d9467a1903412dba81123b283fa.setIcon(div_icon_a7586c7bb8cb980c8c8bb5acb871e3f1);
+        
+    
+        var popup_686cdc51f2b5acbc7bbc433485efcad1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8fc0f532f58643c719b027f68da4dca = $(`<div id="html_c8fc0f532f58643c719b027f68da4dca" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: gray; font-size: 20px;">Northern Territory</div><div style="text-align:center;">$2239/week</div>`)[0];
+                popup_686cdc51f2b5acbc7bbc433485efcad1.setContent(html_c8fc0f532f58643c719b027f68da4dca);
+            
+        
+
+        marker_20af5d9467a1903412dba81123b283fa.bindPopup(popup_686cdc51f2b5acbc7bbc433485efcad1)
+        ;
+
+        
+    
+    
+            var circle_marker_3e6706aacd70888b7ccfe3ecf8a3f7b1 = L.circleMarker(
+                [-35.4735, 149.0124],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+        var popup_eaed03442bd91d77cdfbc3f93f87d41a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_746820a2266c5e36797bed4b03ed548c = $(`<div id="html_746820a2266c5e36797bed4b03ed548c" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: black; font-size: 20px;">Australian Capital Territory</div><div style="text-align:center;">$2550/week</div>`)[0];
+                popup_eaed03442bd91d77cdfbc3f93f87d41a.setContent(html_746820a2266c5e36797bed4b03ed548c);
+            
+        
+
+        circle_marker_3e6706aacd70888b7ccfe3ecf8a3f7b1.bindPopup(popup_eaed03442bd91d77cdfbc3f93f87d41a)
+        ;
+
+        
+    
+    
+            var marker_82fa2f9de82f5adef426c26ebd6d549b = L.marker(
+                [-37.4735, 147.0124],
+                {}
+            ).addTo(map_ca276c6319ef6f6242ec6dd1f3c6fcbe);
+        
+    
+            var div_icon_6c7e8987325c953082677b9d1cf08842 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027color:black; font-size:15px;\u0027\u003eAustralian Capital Territory\u003c/div\u003e"});
+            marker_82fa2f9de82f5adef426c26ebd6d549b.setIcon(div_icon_6c7e8987325c953082677b9d1cf08842);
+        
+    
+        var popup_dc2ee916fb2ccc6db3cb12280b1047cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a896b257db697a9d2bb193dd0ef47fa = $(`<div id="html_8a896b257db697a9d2bb193dd0ef47fa" style="width: 100.0%; height: 100.0%;"><div style="text-align:center; color: black; font-size: 20px;">Australian Capital Territory</div><div style="text-align:center;">$2550/week</div>`)[0];
+                popup_dc2ee916fb2ccc6db3cb12280b1047cb.setContent(html_8a896b257db697a9d2bb193dd0ef47fa);
+            
+        
+
+        marker_82fa2f9de82f5adef426c26ebd6d549b.bindPopup(popup_dc2ee916fb2ccc6db3cb12280b1047cb)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .tm-main-nav {
+            overflow-y: auto;
+            height: 380px;  /* Adjust height as necessary */
+        }
+        .tm-main-nav::-webkit-scrollbar {
+            display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+        .tm-main-nav {
+            -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none;  /* Hide scrollbar for Firefox */
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* This line is not strictly necessary unless you also want to vertically center the button, but it's often used with justify-content for full centering */
+            height: 100%; /* You can adjust this as needed or remove it if you don't want to set a specific height */
+        }
+        .tm-button.tm-button-wide {
+            border-radius: 5px; /* This will give the button rounded corners */
+            margin-bottom: 20px; /* This will add space below the button */
+        }
+    </style>
+
+    <title>Transport, Postal & Warehousing</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="/css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <!-- Left column: logo and menu -->
+                    <div class="tm-blue-bg tm-left-column">                        
+                        <div class="tm-logo-div text-xs-center">
+                            <img src="/img/slogo.png" alt="Logo">
+                            <h1 class="tm-site-name">Transport, Postal & Warehousing</h1>
+                        </div>
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                                <li class="tm-nav-item">
+                                    <a href="#welcome" class="tm-nav-item-link">Skill Set</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#about" class="tm-nav-item-link">Core Skills</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#galleryone" class="tm-nav-item-link">Skill Tree</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#secondgallery" class="tm-nav-item-link">Optional Major Advice</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#contact" class="tm-nav-item-link">Save Report</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#thirdgallery" class="tm-nav-item-link">Return to XSalary Home</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <script>
+                            const navElement = document.getElementById('autoScrollNav');
+                            let isScrolling = false;
+
+                            navElement.addEventListener('mousemove', function(event) {
+                                // Define the threshold distance from the edges (e.g., 20px)
+                                const threshold = 20;
+
+                                // Check if the mouse is close to the top or bottom of the navigation menu
+                                const nearTop = event.offsetY <= threshold;
+                                const nearBottom = event.offsetY >= navElement.clientHeight - threshold;
+
+                                // Scroll the menu if the mouse is near the top or bottom
+                                if (nearTop && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(-1); // Scroll up
+                                } else if (nearBottom && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(1);  // Scroll down
+                                } else if (!nearTop && !nearBottom) {
+                                    isScrolling = false; // Stop scrolling if the mouse is away from the edges
+                                }
+                            });
+
+                            function scrollMenu(direction) {
+                                if (isScrolling) {
+                                    navElement.scrollTop += 5 * direction; // 5 is the number of pixels to scroll per frame; adjust as needed
+                                    setTimeout(() => scrollMenu(direction), 30); // 30ms delay between scrolls; adjust as needed
+                                }
+                            }
+                        </script>
+                    </div> <!-- Left column: logo and menu -->
+                    
+                    <!-- Right column: content -->
+                    <div class="tm-right-column">
+                        <figure>
+                            <img src="/img/tree.jpg" alt="Header image" class="img-fluid">
+                        </figure>
+
+                        <div class="tm-content-div">
+                            <!-- Welcome section -->
+                            <section id="welcome" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Skill Set</h2>
+                                </header>
+                                <p>This is the last section of XSalary.<br>With the personality test and salary analysis all done, you should be pretty confident about your future career choices. This bonus part of XSalary is about required skills in the decided industry area. We offer a skill tree to let you get started from basic level all the way to the advanced level. You can also find useful information about the major to choose if you wish to take further education to gain the skills. In addition to this, you can choose to generate the skill set and careers support to a pdf report and save it to your local harddrive. So you can check our tips, advice and recommendations anytime, anywhere!<br>Hope our careers support will help you achieve a glorious future!</p>
+                            </section>
+                            <!-- Core Skills section -->
+                            <section id="about" class="tm-section">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 push-lg-4 push-md-5">
+                                        <header>
+                                            <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Core Skills</h2>
+                                        </header>
+                                        <p>
+                                            <b>Logistics and Supply Chain Management:</b><br>
+                                            Inventory Control: Manage and optimize inventory levels for efficient operations.<br>
+                                            Route Planning: Develop expertise in route optimization and logistics coordination.<br>
+
+                                            <b>Safety and Compliance:</b><br>
+                                            Safety Protocols: Prioritize safety in transportation and warehousing activities.<br>
+                                            Regulatory Compliance: Ensure compliance with transportation regulations, including those related to hazardous materials (if applicable).<br>
+
+                                            <b>Fleet Management:</b><br>
+                                            Vehicle Maintenance: Learn maintenance and repair procedures for vehicles and equipment.<br>
+                                            Driver Management: Supervise drivers and monitor their performance.<br>
+
+                                            <b>Warehouse Operations:</b><br>
+                                            Material Handling: Efficiently handle and store goods within warehouses.<br>
+                                            Warehouse Layout: Optimize warehouse layouts for streamlined operations.<br>
+
+                                            <b>Health and Safety:</b><br>
+                                            Occupational Health: Ensure miners' well-being through regular health checks and safety measures.<br>
+                                            Emergency Response: Prepare for emergencies like cave-ins or gas leaks with comprehensive response plans.<br>
+
+                                            <b>Technology Integration:</b><br>
+                                            Transportation Management Systems (TMS): Familiarize yourself with TMS for efficient route planning and tracking.<br>
+                                            Warehouse Management Systems (WMS): Use WMS for inventory control and order fulfillment.<br>
+
+                                            <b>Communication and Coordination:</b><br>
+                                            Effective Communication: Communicate clearly with team members, drivers, and customers.<br>
+                                            Collaboration: Collaborate with cross-functional teams for seamless operations.<br>
+
+                                            <b>Problem-Solving:</b><br>
+                                            Critical Thinking: Analyze transportation and logistics challenges and find effective solutions.<br>
+                                            Conflict Resolution: Resolve issues that may arise in transportation and warehousing activities.<br>
+
+                                            <b>Customer Service:</b><br>
+                                            Client Relations: Build and maintain positive relationships with customers, addressing their needs and concerns.<br>
+                                            Delivery Tracking: Provide customers with accurate and real-time tracking information.<br>
+
+                                            <b>Environmental Awareness:</b><br>
+                                            Sustainability Practices: Promote sustainable transportation and warehousing practices, such as fuel efficiency and waste reduction.<br>
+
+                                            <b>Financial Management:</b><br>
+                                            Budgeting: Develop budgeting skills for managing transportation and warehousing expenses.<br>
+                                            Cost Control: Identify cost-saving measures and optimize resource allocation.<br>
+
+                                            <b>Data Analysis:</b><br>
+                                            Data Interpretation: Analyze transportation data for optimizing routes and reducing costs.<br>
+                                            Performance Metrics: Monitor key performance indicators (KPIs) to assess operational efficiency.<br>
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
+                                        <img src="/img/08.jpg" alt="Image" class="img-fluid">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Skill Tree section -->
+                            <section id="galleryone" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Skill Tree</h2></header>
+                                <p><b>Level 1: Foundation Skills (Transport, Postal & Warehousing Industry)</b></p>
+                                <p>
+                                    - Safety Awareness: Understand and prioritize safety protocols in transportation and warehousing operations. Safety is paramount in this industry. You should be aware of and prioritize safety protocols, including the use of personal protective equipment (PPE) and emergency response procedures.<br>
+                                    - Communication Skills: Develop effective communication skills for interacting with colleagues, clients, and logistics partners. Strong communication skills are vital for conveying information clearly, ensuring smooth operations, and addressing customer needs.<br>
+                                    - Adaptability: Be prepared to adapt to changing logistics and transportation conditions, including weather and traffic. The industry often requires quick adaptation to varying circumstances.<br>
+                                    - Basic Vehicle Operation: Learn to operate basic vehicles and equipment safely, such as forklifts or delivery vans. Proficiency in operating essential equipment is fundamental for transportation and warehousing roles.<br>
+                                    - Inventory Management: Understand the basics of inventory control, stock tracking, and warehouse organization. Efficiently managing inventory is key to meeting customer demand and minimizing holding costs.
+                                </p>
+                                <p><b>Level 2: Core Skills (Transport, Postal & Warehousing Industry)</b></p>
+                                <p>
+                                    - Logistics Coordination: Develop skills for coordinating the movement of goods and materials.<br>
+                                    - Route Planning: Gain expertise in planning efficient transportation routes and delivery schedules.<br>
+                                    - Vehicle Maintenance: Learn basic vehicle maintenance and inspection procedures.<br>
+                                    - Teamwork: Collaborate effectively with colleagues and logistics partners.<br>
+                                    - Warehouse Operations: Understand core warehouse processes, including receiving, storage, and order fulfillment.
+                                </p>
+                                <p><b>Level 3: Specialized Skills (Transport, Postal & Warehousing Industry)</b></p>
+                                <p>
+                                    - Advanced Vehicle Operation: Specialize in the operation of specialized vehicles or equipment (e.g., heavy trucks, cranes).<br>
+                                    - Supply Chain Management: Acquire expertise in supply chain optimization, procurement, and distribution.<br>
+                                    - Freight Forwarding: Focus on the coordination of international shipping and customs processes.<br>
+                                    - Warehouse Automation: Learn about automated warehousing systems and technologies.<br>
+                                    - Dangerous Goods Handling: Specialize in the handling and transportation of hazardous materials.
+                                </p>
+                                <p><b>Level 4: Advanced Skills (Transport, Postal & Warehousing Industry)</b></p>
+                                <p>
+                                    - Fleet Management: Assume roles in managing vehicle fleets, maintenance, and optimization.<br>
+                                    - Logistics Strategy: Develop and implement strategic logistics plans for efficiency and cost reduction.<br>
+                                    - Regulatory Compliance: Ensure compliance with transportation and warehousing regulations.<br>
+                                    - Health and Safety Leadership: Lead safety initiatives and ensure compliance.<br>
+                                    - Inventory Optimization: Implement advanced inventory control strategies for cost reduction.
+                                </p>
+                                <p><b>Level 5: Licensing and Certification (Transport, Postal & Warehousing Industry)</b></p>
+                                <p>
+                                    - Obtain Relevant Industry Licenses and Certifications (e.g., Commercial Driver's License, Certified Logistics Professional).<br>
+                                    - Regulatory Compliance: Ensure compliance with transportation and warehousing regulations.<br>
+                                    - Safety Certifications: Attain safety certifications relevant to transportation and warehousing roles.<br>
+                                    - Management and Leadership Certifications: Pursue certifications related to logistics and operations management.
+                                </p>
+                                <p><b>Level 6: Continuing Education and Specialization (Transport, Postal & Warehousing Industry)</b></p>
+                                <p>
+                                    - Continuous Learning: Stay updated on industry advancements, new technologies, and regulations.<br>
+                                    - Advanced Education: Pursue advanced degrees (e.g., Master's in Logistics and Supply Chain Management).<br>
+                                    - Ongoing Industry Training: Attend logistics-focused training programs, workshops, and conferences.<br>
+                                    - Specialization: Focus on a specific aspect of the industry (e.g., cold chain logistics, international shipping).<br>
+                                    - Research and Publications: Contribute to industry knowledge through research and publications.
+                                </p>
+                            </section>
+
+                            <!-- Optional Major Advice section -->
+                            <section id="secondgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Optional Major Advice</h2></header>
+                                <p>Choosing the right major can significantly impact your career in transport, postal, and warehousing. Here are some recommended majors and fields of study:</p>
+
+                                <p>
+                                    Supply Chain Management: Pursue a degree in Supply Chain Management for a comprehensive understanding of logistics, transportation, and warehousing within the supply chain.<br>
+
+                                    Logistics Management: A major in Logistics Management emphasizes logistics planning, coordination, and optimization, which are critical in this industry.<br>
+
+                                    Transportation Management: Consider a major in Transportation Management to specialize in transportation planning, fleet management, and logistics coordination.<br>
+
+                                    Business Administration: A degree in Business Administration with a focus on operations or supply chain management can be valuable for leadership roles in the transportation and warehousing sector.<br>
+
+                                    Engineering (e.g., Mechanical, Industrial): Engineering majors provide technical skills relevant to vehicle maintenance, equipment design, and warehouse optimization.<br>
+
+                                    Environmental Sustainability: If you are interested in promoting eco-friendly practices in transportation and warehousing, a major in Environmental Sustainability is advantageous.<br>
+
+                                    Data Science or Data Analytics: For roles involving data analysis, route optimization, and performance monitoring, majors related to data science or data analytics can be relevant.<br>
+
+                                    Safety Management: Consider a major in Safety Management if you aim to specialize in safety protocols and compliance in transportation and warehousing.<br>
+                                </p>
+                            </section>
+
+                            <!-- Save Report section -->
+                            <section id="contact" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Save Report</h2></header>
+                                <p>
+                                    Click the button below to save a pdf report to your local storage.
+                                </p>
+                                <div class="row">
+                                    <div class="col-lg-6 tm-contact-right">
+                                        <a type="submit" class="float-right tm-button" href="/pdf/Transport, Postal & Warehousing.pdf" download="Transport, Postal & Warehousing.pdf">Generate!</a>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <!-- Return to XSalary Home -->
+                            <section id="thirdgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Now you can return to XSalary Homepage</h2></header>
+                                <div class="center-container">
+                                    <a href="../home.html" class="tm-button tm-button-wide">Home</a>
+                                </div>
+
+                                <!-- Create a canvas element on which the fireworks will be drawn -->
+                                <canvas id="fireworks"></canvas>
+                                <script>
+                                    // Get the canvas element and its drawing context
+                                    const canvas = document.getElementById('fireworks');
+                                    const ctx = canvas.getContext('2d');
+
+                                    // Set the canvas size to full screen
+                                    canvas.width = window.innerWidth;
+                                    canvas.height = window.innerHeight;
+
+                                    // Define the Particle class for the explosion particles
+                                    class Particle {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Random initial velocity
+                                            this.velocity = {
+                                                x: (Math.random() - 0.5) * 8,
+                                                y: (Math.random() - 0.5) * 8
+                                            };
+                                            this.alpha = 1; // Opacity of the particle
+                                            this.friction = 0.99; // Friction to slow down particles
+                                        }
+
+                                        // Draw a particle on the canvas
+                                        draw() {
+                                            ctx.globalAlpha = this.alpha;
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Update the particle position and opacity
+                                        update() {
+                                            this.velocity.x *= this.friction;
+                                            this.velocity.y *= this.friction;
+                                            this.x += this.velocity.x;
+                                            this.y += this.velocity.y;
+                                            this.alpha -= 0.01; // Fade out the particle
+                                        }
+                                    }
+
+                                    // Define the Firework class for the rockets
+                                    class Firework {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Initial upward velocity
+                                            this.velocity = { x: 0, y: Math.random() * -2.5 - 0.5 };
+                                            this.particles = []; // Particles for explosion
+                                            this.lifespan = 180; // Time before explosion
+                                            this.hasExploded = false; // Track if the firework has exploded
+                                        }
+
+                                        // Draw the firework rocket on the canvas
+                                        draw() {
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 3, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Create particles for explosion
+                                        explode() {
+                                            for (let i = 0; i < 50; i++) {
+                                                this.particles.push(new Particle(this.x, this.y, this.color));
+                                            }
+                                        }
+
+                                        // Update the firework position, check for explosion
+                                        update() {
+                                            this.lifespan--;
+
+                                            // Check if the firework should explode
+                                            if (this.lifespan <= 0 && !this.hasExploded) {
+                                                this.explode();
+                                                this.velocity = { x: 0, y: 0 };
+                                                this.hasExploded = true;
+                                            } else if (this.lifespan > 0) {
+                                                this.y += this.velocity.y;
+                                            }
+
+                                            // Update and draw particles
+                                            for (let i = 0; i < this.particles.length; i++) {
+                                                this.particles[i].update();
+                                                this.particles[i].draw();
+                                            }
+                                        }
+                                    }
+
+                                    // Array to store the fireworks
+                                    let fireworks = [];
+
+                                    // Function to animate the fireworks
+                                    function animate() {
+                                        // Request the next animation frame
+                                        requestAnimationFrame(animate);
+
+                                        // Clear the canvas and create a trailing effect
+                                        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+                                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                                        // Update and draw each firework
+                                        fireworks.forEach((firework, index) => {
+                                            firework.update();
+                                            firework.draw();
+
+                                            // Remove fireworks that have finished exploding
+                                            if (firework.lifespan <= 0 && firework.particles.every(p => p.alpha <= 0)) {
+                                                fireworks.splice(index, 1);
+                                            }
+                                        });
+
+                                        // Occasionally create a new firework
+                                        if (Math.random() < 0.015) {
+                                            const x = Math.random() * canvas.width;
+                                            const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                                            fireworks.push(new Firework(x, canvas.height, color));
+                                        }
+                                    }
+
+                                    // Start the animation
+                                    animate();
+                                </script>
+
+                                <div class="tm-gallery-container tm-gallery-3">
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-11.jpg"><img src="/img/neaty-11.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-12.jpg"><img src="/img/neaty-12.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-13.jpg"><img src="/img/neaty-13.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-14.jpg"><img src="/img/neaty-14.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <footer>
+                                <p class="tm-copyright-p"> &copy; 2023 IDers(TP22). All rights reserved. </p>
+                            </footer>
+                        </div>  
+                        
+                    </div> <!-- Right column: content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+                
+        <!-- load JS files -->
+        <script src="/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="/js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script>     
+       
+            $(document).ready(function(){
+
+                // Single page nav
+                $('.tm-main-nav').singlePageNav({
+                    'currentClass' : "active",
+                    offset : 20
+                });
+
+                // Magnific pop up
+                $('.tm-gallery-1').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-2').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-3').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-current-year').text(new Date().getFullYear());                
+            });
+        </script>             
+</body>
+</html>

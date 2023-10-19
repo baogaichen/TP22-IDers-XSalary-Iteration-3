@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .tm-main-nav {
+            overflow-y: auto;
+            height: 380px;  /* Adjust height as necessary */
+        }
+        .tm-main-nav::-webkit-scrollbar {
+            display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+        .tm-main-nav {
+            -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none;  /* Hide scrollbar for Firefox */
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* This line is not strictly necessary unless you also want to vertically center the button, but it's often used with justify-content for full centering */
+            height: 100%; /* You can adjust this as needed or remove it if you don't want to set a specific height */
+        }
+        .tm-button.tm-button-wide {
+            border-radius: 5px; /* This will give the button rounded corners */
+            margin-bottom: 20px; /* This will add space below the button */
+        }
+    </style>
+
+    <title>Accommodation & Food Services</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="/css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <!-- Left column: logo and menu -->
+                    <div class="tm-blue-bg tm-left-column">                        
+                        <div class="tm-logo-div text-xs-center">
+                            <img src="/img/slogo.png" alt="Logo">
+                            <h1 class="tm-site-name">Accommodation & Food Services</h1>
+                        </div>
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                                <li class="tm-nav-item">
+                                    <a href="#welcome" class="tm-nav-item-link">Skill Set</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#about" class="tm-nav-item-link">Core Skills</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#galleryone" class="tm-nav-item-link">Skill Tree</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#secondgallery" class="tm-nav-item-link">Optional Major Advice</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#contact" class="tm-nav-item-link">Save Report</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#thirdgallery" class="tm-nav-item-link">Return to XSalary Home</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <script>
+                            const navElement = document.getElementById('autoScrollNav');
+                            let isScrolling = false;
+
+                            navElement.addEventListener('mousemove', function(event) {
+                                // Define the threshold distance from the edges (e.g., 20px)
+                                const threshold = 20;
+
+                                // Check if the mouse is close to the top or bottom of the navigation menu
+                                const nearTop = event.offsetY <= threshold;
+                                const nearBottom = event.offsetY >= navElement.clientHeight - threshold;
+
+                                // Scroll the menu if the mouse is near the top or bottom
+                                if (nearTop && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(-1); // Scroll up
+                                } else if (nearBottom && !isScrolling) {
+                                    isScrolling = true;
+                                    scrollMenu(1);  // Scroll down
+                                } else if (!nearTop && !nearBottom) {
+                                    isScrolling = false; // Stop scrolling if the mouse is away from the edges
+                                }
+                            });
+
+                            function scrollMenu(direction) {
+                                if (isScrolling) {
+                                    navElement.scrollTop += 5 * direction; // 5 is the number of pixels to scroll per frame; adjust as needed
+                                    setTimeout(() => scrollMenu(direction), 30); // 30ms delay between scrolls; adjust as needed
+                                }
+                            }
+                        </script>
+                    </div> <!-- Left column: logo and menu -->
+                    
+                    <!-- Right column: content -->
+                    <div class="tm-right-column">
+                        <figure>
+                            <img src="/img/tree.jpg" alt="Header image" class="img-fluid">
+                        </figure>
+
+                        <div class="tm-content-div">
+                            <!-- Welcome section -->
+                            <section id="welcome" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Skill Set</h2>
+                                </header>
+                                <p>This is the last section of XSalary.<br>With the personality test and salary analysis all done, you should be pretty confident about your future career choices. This bonus part of XSalary is about required skills in the decided industry area. We offer a skill tree to let you get started from basic level all the way to the advanced level. You can also find useful information about the major to choose if you wish to take further education to gain the skills. In addition to this, you can choose to generate the skill set and careers support to a pdf report and save it to your local harddrive. So you can check our tips, advice and recommendations anytime, anywhere!<br>Hope our careers support will help you achieve a glorious future!</p>
+                            </section>
+                            <!-- Core Skills section -->
+                            <section id="about" class="tm-section">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 push-lg-4 push-md-5">
+                                        <header>
+                                            <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Core Skills</h2>
+                                        </header>
+                                        <p>
+                                            <b>Customer Service:</b><br>
+                                            Hospitality: Provide exceptional hospitality to guests, ensuring a positive experience.<br>
+                                            Conflict Resolution: Resolve guest complaints and issues promptly and professionally.<br>
+
+                                            <b>Food and Beverage Knowledge:</b><br>
+                                            Menu Knowledge: Develop a deep understanding of menu items, ingredients, and preparation methods.<br>
+                                            Wine and Beverage Service: Familiarize yourself with wine pairings and beverage service if working in food and beverage establishments.<br>
+
+                                            <b>Food Safety and Sanitation:</b><br>
+                                            Food Handling: Follow proper food safety protocols and hygiene standards.<br>
+                                            Sanitation: Ensure cleanliness and sanitation in food preparation and service areas.<br>
+
+                                            <b>Culinary Skills:</b><br>
+                                            Cooking Techniques: If working in the kitchen, master cooking techniques and food presentation.<br>
+                                            Menu Development: Contribute to menu planning and development if applicable.<br>
+
+                                            <b>Restaurant Management:</b><br>
+                                            Table Service: Learn effective table service techniques and guest interaction.<br>
+                                            Reservation Management: Manage reservations and seating arrangements.<br>
+                                            Order Processing: Handle orders efficiently and accurately.<br>
+
+                                            <b>Hospitality Technology:</b><br>
+                                            Point-of-Sale (POS) Systems: Be proficient in using POS systems for order processing and payment.<br>
+                                            Online Reservation Systems: Familiarize yourself with online reservation and booking platforms.<br>
+
+                                            <b>Financial Acumen:</b><br>
+                                            Budgeting and Cost Control: Understand cost control measures to optimize profitability.<br>
+                                            Pricing Strategies: Participate in setting pricing strategies for menu items.<br>
+
+                                            <b>Event Planning:</b><br>
+                                            Event Coordination: Learn event planning and coordination for special occasions and functions.<br>
+                                            Banquet Services: Understand banquet setup and service for events and conferences.<br>
+
+                                            <b>Cultural Sensitivity:</b><br>
+                                            Cultural Awareness: Respect and adapt to diverse cultural perspectives and guest expectations.<br>
+                                            Multilingual Skills: Learn additional languages to communicate effectively with international guests.<br>
+
+                                            <b>Time Management:</b><br>
+                                            Efficiency: Manage time effectively in a fast-paced environment.<br>
+                                            Scheduling: Plan and coordinate work shifts and tasks.<br>
+
+                                            <b>Communication:</b><br>
+                                            Effective Communication: Communicate clearly with colleagues and guests.<br>
+                                            Teamwork: Collaborate with kitchen staff, servers, and management to ensure smooth operations.<br>
+
+                                            <b>Marketing and Promotion:</b><br>
+                                            Promotional Strategies: Understand marketing tactics for attracting guests.<br>
+                                            Customer Engagement: Engage with guests through loyalty programs, feedback collection, and social media.<br>
+
+                                            <b>Wine and Beverage Knowledge:</b><br>
+                                            Wine Selection: If working in fine dining or wine service, learn about wine selection, pairings, and presentation.<br>
+                                            Beverage Mixology: Gain expertise in cocktail preparation and mixology if applicable.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
+                                        <img src="/img/07.jpg" alt="Image" class="img-fluid">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Skill Tree section -->
+                            <section id="galleryone" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Skill Tree</h2></header>
+                                <p><b>Level 1: Foundation Skills (Accommodation & Food Services Industry)</b></p>
+                                <p>
+                                    - Customer Service Basics: Learn essential customer service skills for providing guests with a positive experience. Exceptional customer service is a cornerstone of success in this industry.<br>
+                                    - Communication Skills: Develop effective communication skills for interacting with guests and colleagues. Strong communication skills are vital for conveying information clearly and assisting guests.<br>
+                                    - Adaptability: Be prepared to adapt to changing guest preferences, seasonal variations, and industry trends. The industry often requires quick adaptation to varying circumstances.<br>
+                                    - Safety Awareness: Understand and prioritize safety protocols for guests and staff. Safety is paramount in the hospitality industry. You should be aware of and prioritize safety protocols.<br>
+                                    - Time Management: Efficiently manage tasks, reservations, and guest service schedules. Effective time management ensures smooth daily operations.
+                                </p>
+                                <p><b>Level 2: Core Skills (Accommodation & Food Services Industry)</b></p>
+                                <p>
+                                    - Guest Relations: Develop skills for building positive guest relationships and addressing their needs.<br>
+                                    - Front Office Operations: Gain expertise in front desk operations, reservations, and check-ins.<br>
+                                    - Food Service Basics: Learn fundamental food service principles and hygiene practices.<br>
+                                    - Teamwork: Collaborate effectively with colleagues in various roles within the establishment.<br>
+                                    - Menu Knowledge: Familiarize yourself with the menu offerings and preparation methods.
+                                </p>
+                                <p><b>Level 3: Specialized Skills (Accommodation & Food Services Industry)</b></p>
+                                <p>
+                                    - Culinary Expertise: Specialize in culinary arts, including cooking techniques and menu development.<br>
+                                    - Event Planning: Develop event planning skills for hosting special occasions and banquets.<br>
+                                    - Beverage Service: Gain expertise in wine, beverage, and bar service.<br>
+                                    - Hospitality Management: Acquire skills for managing the overall operations of accommodation and food establishments.<br>
+                                    - Sustainable Practices: Implement sustainable and eco-friendly practices in hospitality.
+                                </p>
+                                <p><b>Level 4: Advanced Skills (Accommodation & Food Services Industry)</b></p>
+                                <p>
+                                    - Hotel or Restaurant Management: Assume management roles, overseeing daily operations and staff.<br>
+                                    - Revenue Management: Optimize pricing and revenue strategies to maximize profitability.<br>
+                                    - Marketing and Branding: Develop marketing strategies to promote the establishment and enhance its brand.<br>
+                                    - Quality Assurance and Compliance: Ensure high-quality service and compliance with industry regulations.<br>
+                                    - Guest Experience Enhancement: Implement strategies to enhance the overall guest experience.
+                                </p>
+                                <p><b>Level 5: Licensing and Certification (Accommodation & Food Services Industry)</b></p>
+                                <p>
+                                    - Obtain Relevant Industry Certifications (e.g., Certified Hotel Administrator, Food Safety Certification).<br>
+                                    - Regulatory Compliance: Ensure compliance with hospitality industry regulations, including food safety and health codes.<br>
+                                    - Alcohol Service Permit: If involved in beverage service, obtain necessary permits for alcohol service.<br>
+                                    - Leadership and Management Certifications: Pursue certifications related to hospitality leadership and management.
+                                </p>
+                                <p><b>Level 6: Continuing Education and Specialization (Accommodation & Food Services Industry)</b></p>
+                                <p>
+                                    - Continuous Learning: Stay updated on industry trends, new technologies, and customer preferences.<br>
+                                    - Advanced Education: Pursue advanced degrees (e.g., Master's in Hospitality Management).<br>
+                                    - Ongoing Industry Training: Attend hospitality-focused training programs, workshops, and conferences.<br>
+                                    - Specialization: Focus on a specific aspect of the industry (e.g., luxury hospitality, event management).<br>
+                                    - Research and Publications: Contribute to industry knowledge through research and publications.
+                                </p>
+                            </section>
+
+                            <!-- Optional Major Advice section -->
+                            <section id="secondgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Optional Major Advice</h2></header>
+                                <p>Choosing the right major can significantly impact your career in accommodation and food services. Here are some recommended majors and fields of study:</p>
+
+                                <p>
+                                    Hospitality Management: Pursue a degree in Hospitality Management for a comprehensive understanding of hotel and restaurant operations, guest services, and event management.<br>
+
+                                    Culinary Arts: If you aspire to work in the culinary aspect of the industry, consider a major in Culinary Arts to master cooking techniques, menu development, and kitchen management.<br>
+
+                                    Hotel Management: This major focuses on hotel operations, including guest services, reservations, and hotel administration.<br>
+
+                                    Restaurant Management: A major in Restaurant Management provides specialized knowledge in restaurant operations, menu planning, and customer service.<br>
+
+                                    Food and Beverage Management: This major emphasizes the management of food and beverage establishments, including bar and restaurant operations.<br>
+
+                                    Event Management: For careers involving event planning and coordination in the accommodation and food services industry, consider a major in Event Management.<br>
+
+                                    Business Administration: A degree in Business Administration with a focus on hospitality management or entrepreneurship can be valuable for leadership roles in the industry.<br>
+
+                                    Marketing: A Marketing major can be beneficial for roles involving restaurant marketing, guest engagement, and promotions.<br>
+                                </p>
+                            </section>
+
+                            <!-- Save Report section -->
+                            <section id="contact" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Save Report</h2></header>
+                                <p>
+                                    Click the button below to save a pdf report to your local storage.
+                                </p>
+                                <div class="row">
+                                    <div class="col-lg-6 tm-contact-right">
+                                        <a type="submit" class="float-right tm-button" href="/pdf/Accommodation& Food Services.pdf" download="Accommodation& Food Services.pdf">Generate!</a>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <!-- Return to XSalary Home -->
+                            <section id="thirdgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Now you can return to XSalary Homepage</h2></header>
+                                <div class="center-container">
+                                    <a href="../home.html" class="tm-button tm-button-wide">Home</a>
+                                </div>
+
+                                <!-- Create a canvas element on which the fireworks will be drawn -->
+                                <canvas id="fireworks"></canvas>
+                                <script>
+                                    // Get the canvas element and its drawing context
+                                    const canvas = document.getElementById('fireworks');
+                                    const ctx = canvas.getContext('2d');
+
+                                    // Set the canvas size to full screen
+                                    canvas.width = window.innerWidth;
+                                    canvas.height = window.innerHeight;
+
+                                    // Define the Particle class for the explosion particles
+                                    class Particle {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Random initial velocity
+                                            this.velocity = {
+                                                x: (Math.random() - 0.5) * 8,
+                                                y: (Math.random() - 0.5) * 8
+                                            };
+                                            this.alpha = 1; // Opacity of the particle
+                                            this.friction = 0.99; // Friction to slow down particles
+                                        }
+
+                                        // Draw a particle on the canvas
+                                        draw() {
+                                            ctx.globalAlpha = this.alpha;
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Update the particle position and opacity
+                                        update() {
+                                            this.velocity.x *= this.friction;
+                                            this.velocity.y *= this.friction;
+                                            this.x += this.velocity.x;
+                                            this.y += this.velocity.y;
+                                            this.alpha -= 0.01; // Fade out the particle
+                                        }
+                                    }
+
+                                    // Define the Firework class for the rockets
+                                    class Firework {
+                                        constructor(x, y, color) {
+                                            this.x = x;
+                                            this.y = y;
+                                            this.color = color;
+                                            // Initial upward velocity
+                                            this.velocity = { x: 0, y: Math.random() * -2.5 - 0.5 };
+                                            this.particles = []; // Particles for explosion
+                                            this.lifespan = 180; // Time before explosion
+                                            this.hasExploded = false; // Track if the firework has exploded
+                                        }
+
+                                        // Draw the firework rocket on the canvas
+                                        draw() {
+                                            ctx.beginPath();
+                                            ctx.arc(this.x, this.y, 3, 0, Math.PI * 2, false);
+                                            ctx.fillStyle = this.color;
+                                            ctx.fill();
+                                        }
+
+                                        // Create particles for explosion
+                                        explode() {
+                                            for (let i = 0; i < 50; i++) {
+                                                this.particles.push(new Particle(this.x, this.y, this.color));
+                                            }
+                                        }
+
+                                        // Update the firework position, check for explosion
+                                        update() {
+                                            this.lifespan--;
+
+                                            // Check if the firework should explode
+                                            if (this.lifespan <= 0 && !this.hasExploded) {
+                                                this.explode();
+                                                this.velocity = { x: 0, y: 0 };
+                                                this.hasExploded = true;
+                                            } else if (this.lifespan > 0) {
+                                                this.y += this.velocity.y;
+                                            }
+
+                                            // Update and draw particles
+                                            for (let i = 0; i < this.particles.length; i++) {
+                                                this.particles[i].update();
+                                                this.particles[i].draw();
+                                            }
+                                        }
+                                    }
+
+                                    // Array to store the fireworks
+                                    let fireworks = [];
+
+                                    // Function to animate the fireworks
+                                    function animate() {
+                                        // Request the next animation frame
+                                        requestAnimationFrame(animate);
+
+                                        // Clear the canvas and create a trailing effect
+                                        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+                                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                                        // Update and draw each firework
+                                        fireworks.forEach((firework, index) => {
+                                            firework.update();
+                                            firework.draw();
+
+                                            // Remove fireworks that have finished exploding
+                                            if (firework.lifespan <= 0 && firework.particles.every(p => p.alpha <= 0)) {
+                                                fireworks.splice(index, 1);
+                                            }
+                                        });
+
+                                        // Occasionally create a new firework
+                                        if (Math.random() < 0.015) {
+                                            const x = Math.random() * canvas.width;
+                                            const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                                            fireworks.push(new Firework(x, canvas.height, color));
+                                        }
+                                    }
+
+                                    // Start the animation
+                                    animate();
+                                </script>
+
+                                <div class="tm-gallery-container tm-gallery-3">
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-11.jpg"><img src="/img/neaty-11.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-12.jpg"><img src="/img/neaty-12.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-13.jpg"><img src="/img/neaty-13.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                    <div class="tm-img-container tm-img-container-3">
+                                        <a href="/img/neaty-14.jpg"><img src="/img/neaty-14.jpg" alt="Image" class="img-fluid tm-img-tn"></a>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <footer>
+                                <p class="tm-copyright-p"> &copy; 2023 IDers(TP22). All rights reserved. </p>
+                            </footer>
+                        </div>  
+                        
+                    </div> <!-- Right column: content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+                
+        <!-- load JS files -->
+        <script src="/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="/js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script>     
+       
+            $(document).ready(function(){
+
+                // Single page nav
+                $('.tm-main-nav').singlePageNav({
+                    'currentClass' : "active",
+                    offset : 20
+                });
+
+                // Magnific pop up
+                $('.tm-gallery-1').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-2').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-3').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-current-year').text(new Date().getFullYear());                
+            });
+        </script>             
+</body>
+</html>
