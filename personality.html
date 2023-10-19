@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/personality.css">
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./css/assets/X-icon.png">
+    <link href="./css/assets/X-icon.png" rel="icon">
+
+    <link rel="stylesheet" href="">
+
+
+    <link href="css/main.550dcf66.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSalary - Personality</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        .navbar .dropdown-menu {
+            background-color: rgba(255, 255, 255, 0.5); /* white with 50% opacity */
+            border-radius: 10px;
+            max-height: 400px; /* Adjust this value as needed */
+            overflow-y: auto;
+        }
+        .navbar .dropdown-menu li a {
+            color: black;
+        }
+        /* Style for rounding the corners of dropdown items on hover */
+        .navbar .dropdown-menu li:hover a {
+            background-color: rgba(23, 99, 233, 0.9); /* white with 90% opacity */
+            border-radius: 5px;
+        }
+        /* Style for the text color of dropdown items when hovered */
+        .navbar .dropdown-menu li a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body> <!-- Add your content of header -->
+<header>
+    <nav class="navbar navbar-default active">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html" title="">
+                    <img src="Images/logo.png" height ="80em" class="navbar-logo-img" alt="">
+                    XSalary
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html" title="">Home</a></li>
+                    <li><a href="profile.html" title="">Future Salary</a></li>
+                    <li><a href="personality.html" title="">Personality Test</a></li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="section-container contact-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="section-container-spacer">
+                    <h2 class="text-center">Personality Test</h2>
+                    <b class="text-center">Finish the questions to understand which of the 16 personalities you belong to. We have a personalized career advice for you!</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="quiz-main-page" id="quiz-main-page">
+    <div class="quiz-question-container" id="quiz-question-container">
+        <div class="quiz-question-text-container" id="quiz-question-text-container">
+        </div>
+        <div class="quiz-answer-text-container" id="quiz-answer-text-container">
+            <ul class="quiz-answer-list" id="quiz-answer-list">
+            </ul>
+        </div>
+    </div>
+    <div class="question-iteration-container">
+        <div class="progress-bar-container">
+            <span class="progress-bar-text" id="progress-bar-text"></span>
+            <div class="progress quiz-completion-outer-progress-bar" style="height: 3px;">
+                <div class="quiz-completion-inner-progress-bar" id="quiz-progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="question-iteration-container-single" id="previous-question-load">
+            <span class="question-iteration-icon"> ^ </span>
+        </div>
+        <div class="icon-flipped question-iteration-container-single" id="next-question-load">
+            <span class="question-iteration-icon"> ^ </span>
+        </div>
+    </div>
+</div>
+<!--<script>-->
+<!--    document.addEventListener("DOMContentLoaded", function (event) {-->
+<!--        navbarFixedTopAnimation();-->
+<!--    });-->
+<!--</script>-->
+
+
+<!--<script>-->
+<!--    document.addEventListener("DOMContentLoaded", function (event) {-->
+<!--        navActivePage();-->
+<!--        scrollRevelation('.reveal');-->
+<!--    });-->
+<!--</script>-->
+<script type="text/javascript" src="js/main.0cf8b554.js"></script>
+
+</body>
+<footer class="footer-container white-text-container">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-xs-12">
+                <h3>XSalary</h3>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-7">
+                        <p><small> &copy; 2023 IDers(TP22). All rights reserved. </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

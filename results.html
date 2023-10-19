@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./css/assets/X-icon.png">
+    <link href="./css/assets/X-icon.png" rel="icon">
+
+    <link rel="stylesheet" href="">
+
+
+    <link href="css/main.550dcf66.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSalary - Results</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script defer src="js/results.js"></script>
+    <style>
+        .navbar .dropdown-menu {
+            background-color: rgba(255, 255, 255, 0.5); /* white with 50% opacity */
+            border-radius: 10px;
+            max-height: 400px; /* Adjust this value as needed */
+            overflow-y: auto;
+        }
+        .navbar .dropdown-menu li a {
+            color: black;
+        }
+        /* Style for rounding the corners of dropdown items on hover */
+        .navbar .dropdown-menu li:hover a {
+            background-color: rgba(23, 99, 233, 0.9); /* white with 90% opacity */
+            border-radius: 5px;
+        }
+        /* Style for the text color of dropdown items when hovered */
+        .navbar .dropdown-menu li a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default active">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html" title="">
+                    <img src="Images/logo.png" height ="80em" class="navbar-logo-img" alt="">
+                    XSalary
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html" title="">Home</a></li>
+                    <li><a href="profile.html" title="">Future Salary</a></li>
+                    <li><a href="personality.html" title="">Personality Test</a></li>
+                    <li class="dropdown">
+                        <a href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">*Skill Set<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="skills/S01.html">Mining</a></li>
+                            <li><a href="skills/S02.html">Manufacturing</a></li>
+                            <li><a href="skills/S03.html">Electricity, Gas, Water & Waste services</a></li>
+                            <li><a href="skills/S04.html">Construction</a></li>
+                            <li><a href="skills/S05.html">Wholesale Trade</a></li>
+                            <li><a href="skills/S06.html">Retail Trade</a></li>
+                            <li><a href="skills/S07.html">Accommodation & Food Services</a></li>
+                            <li><a href="skills/S08.html">Transport, Postal & Warehousing</a></li>
+                            <li><a href="skills/S09.html">Information Media & Telecommunications</a></li>
+                            <li><a href="skills/S10.html">Financial & Insurance Services</a></li>
+                            <li><a href="skills/S11.html">Rental, Hiring & Real Estate Services</a></li>
+                            <li><a href="skills/S12.html">Professional, Scientific & Technical Services</a></li>
+                            <li><a href="skills/S13.html">Administrative & Support Services</a></li>
+                            <li><a href="skills/S14.html">Public Administration & Safety</a></li>
+                            <li><a href="skills/S15.html">Education & Training</a></li>
+                            <li><a href="skills/S16.html">Health Care & Social Assistance</a></li>
+                            <li><a href="skills/S17.html">Arts & Recreation Services</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="hero-full-container background-image-container white-text-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Results</h1>
+                <p>You have made this far. Nicely done! Now you can get to the results. It's a good chance to get a careers support.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-container" style="background-image: url(Images/MainBG.jpg);
+    background-size: cover;
+    /*background-size: contain;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px;  /* Optional: adds some spacing inside the main content */
+    color: #333; ">
+    <div class="container text-center">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12 col-md-12 main">
+                <h2>Analysis Results</h2>
+                <div id="results-section">
+                    <p>
+                        <strong>Selected Industry:</strong>
+                        <span id="industry-display">Loading...</span>
+                    </p>
+                    <p>
+                        <strong>Your Expected Salary(weekly):</strong>
+                        $<span id="expected-salary-display">0.00</span>
+                    </p>
+                    <p>
+                        <strong>Average Weekly Salary in the Industry:</strong>
+                        $<span id="average-salary-display">0.00</span>
+                    </p>
+                    <p>
+                        <strong>Difference:</strong>
+                        $<span id="difference-display">0.00</span>
+                    </p>
+
+                    <p id="feedback">Calculating...</p>
+
+                    <a href="profile.html" class="btn btn-default" style = "background-color:blue" title="1">Try Again</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="section-container" style="background-image: url(Images/MainBG.jpg);
+    background-size: cover;
+    /*background-size: contain;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px;  /* Optional: adds some spacing inside the main content */
+    color: #333;">
+    <div class="container text-center">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12 col-md-12">
+
+                <h3 style="font-size: 26px;">Dashboard</h3>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <h4 style="display: inline-block"><b>Salary Range</b></h4>
+                <img id="industryImage1" src="" alt="Industry Related Image 1" width="530" class="img-responsive reveal-content image-center">
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <h4 style="display: inline-block"><b>Salary Trends</b></h4>
+                <p>This line bar chart interaction map help you learn the salary trend and employment situation in recent years, on each point of line chart or bar chart will find the detail values.</p>
+                <img id="industryImage2" src="" alt="Industry Related Image 2" width="500" class="img-responsive reveal-content image-center">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const industry = localStorage.getItem("industry");  // assuming you've stored the selected industry in localStorage
+
+    function setImageBasedOnIndustry(industry) {
+        const imageElement1 = document.getElementById("industryImage1");
+        const imageElement2 = document.getElementById("industryImage2");
+
+        switch (industry) {
+            case "Mining":
+                imageElement1.src = "Images/Mining1.png";
+                imageElement2.src = "Images/Mining2.png";
+                break;
+
+            case "Manufacturing":
+                imageElement1.src = "Images/Manufacturing1.png";
+                imageElement2.src = "Images/Manufacturing2.png";
+                break;
+
+            case "Electricity, Gas, Water & Waste services":
+                imageElement1.src = "Images/Electricity, Gas, Water & Waste services1.png";
+                imageElement2.src = "Images/Electricity, Gas, Water & Waste services2.png";
+                break;
+
+            case "Construction":
+                imageElement1.src = "Images/Construction1.png";
+                imageElement2.src = "Images/Construction2.png";
+                break;
+
+            case "Wholesale Trade":
+                imageElement1.src = "Images/Wholesale Trade1.png";
+                imageElement2.src = "Images/Wholesale Trade2.png";
+                break;
+
+            case "Retail Trade":
+                imageElement1.src = "Images/Retail Trade1.png";
+                imageElement2.src = "Images/Retail Trade2.png";
+                break;
+
+            case "Accommodation & Food Services":
+                imageElement1.src = "Images/Accommodation & Food Services1.png";
+                imageElement2.src = "Images/Accommodation & Food Services2.png";
+                break;
+
+            case "Transport, Postal & Warehousing":
+                imageElement1.src = "Images/Transport, Postal & Warehousing1.png";
+                imageElement2.src = "Images/Transport, Postal & Warehousing2.png";
+                break;
+
+            case "Information Media & Telecommunications":
+                imageElement1.src = "Images/Information Media & Telecommunications1.png";
+                imageElement2.src = "Images/Information Media & Telecommunications2.png";
+                break;
+
+            case "Financial & Insurance Services":
+                imageElement1.src = "Images/Financial & Insurance Services1.png";
+                imageElement2.src = "Images/Financial & Insurance Services2.png";
+                break;
+
+            case "Rental, Hiring & Real Estate Services":
+                imageElement1.src = "Images/Rental, Hiring & Real Estate Services1.png";
+                imageElement2.src = "Images/Rental, Hiring & Real Estate Services2.png";
+                break;
+
+            case "Professional, Scientific & Technical Services":
+                imageElement1.src = "Images/Professional, Scientific & Technical Services1.png";
+                imageElement2.src = "Images/Professional, Scientific & Technical Services2.png";
+                break;
+
+            case "Administrative & Support Services":
+                imageElement1.src = "Images/Administrative & Support Services1.png";
+                imageElement2.src = "Images/Administrative & Support Services2.png";
+                break;
+
+            case "Public Administration & Safety":
+                imageElement1.src = "Images/Public Administration & Safety1.png";
+                imageElement2.src = "Images/Public Administration & Safety2.png";
+                break;
+
+            case "Education & Training":
+                imageElement1.src = "Images/Education & Training1.png";
+                imageElement2.src = "Images/Education & Training2.png";
+                break;
+
+            case "Health Care & Social Assistance":
+                imageElement1.src = "Images/Health Care & Social Assistance1.png";
+                imageElement2.src = "Images/Health Care & Social Assistance2.png";
+                break;
+
+            case "Arts & Recreation Services":
+                imageElement1.src = "Images/Arts & Recreation Services1.png";
+                imageElement2.src = "Images/Arts & Recreation Services2.png";
+                break;
+
+            case "Other Services":
+                imageElement1.src = "Images/Other Services1.png";
+                imageElement2.src = "Images/Other Services2.png";
+                break;
+            //... Add cases for each industry...
+
+            default:
+                // Optional: You can have default images in case the industry doesn't match any of the cases
+                imageElement1.src = "Images/default1.png";
+                imageElement2.src = "Images/default2.png";
+                break;
+        }
+    }
+
+    // When the page loads, update the images based on the industry
+    setImageBasedOnIndustry(industry);
+</script>
+
+<div class="section-container">
+    <div class="container text-center">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12 col-md-12">
+                <h3 class="text-center">Average Salary Level Each State Australia Wide Map</h3>
+                <p>This Australia interaction map help you to understand each state salary in each industry based on open data from ABS website.<br>When you click on each state icon cycle, then will find the salary.</p>
+                <iframe id="industryIframe" width="1000" height="610"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const industry = localStorage.getItem("industry"); // Assuming the selected industry is stored in localStorage
+        const industryIframe = document.getElementById("industryIframe");
+        industryIframe.src = `maps/${industry}.html`;
+    });
+</script>
+
+<div class="section-container">
+    <div class="container text-center">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12 col-md-12">
+                <h3 class="text-center">Future salary prediction based on machine learning model</h3>
+                <p>We create a predictive model to forecast future salary and give strategic report.<br>The data we use has up to 100,000 records. The accuracy of our prediction is assured!</p>
+                <!-- Input Form -->
+                <form id="inputForm">
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <label for="industry">Industry:</label>
+                    <select id="industry">
+                        <option value="Mining">Mining</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Electricity, gas, water & waste services">Electricity, Gas, Water & Waste services</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Wholesale trade">Wholesale Trade</option>
+                        <option value="Retail trade">Retail Trade</option>
+                        <option value="Accommodation & food services">Accommodation & Food Services</option>
+                        <option value="Transport, postal & warehousing">Transport, Postal & Warehousing</option>
+                        <option value="Information media & telecommunications">Information Media & Telecommunications</option>
+                        <option value="Financial & insurance services">Financial & Insurance Services</option>
+                        <option value="Rental, hiring & real estate services">Rental, Hiring & Real Estate Services</option>
+                        <option value="Professional, scientific & technical services">Professional, Scientific & Technical Services</option>
+                        <option value="Administrative & support services">Administrative & Support Services</option>
+                        <option value="Public administration & safety">Public Administration & Safety</option>
+                        <option value="Education & training">Education & Training</option>
+                        <option value="Health Care & Social Assistance">Health Care & Social Assistance</option>
+                        <option value="Arts & recreation services">Arts & Recreation Services</option>
+                        <option value="Other services">Other Services</option>
+                        <!-- Add other industries if required -->
+                    </select>
+
+                    <label for="state">State:</label>
+                    <select id="state">
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="SA">SA</option>
+                        <option value="WA">WA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="NT">NT</option>
+                        <option value="ACT">ACT</option>
+                        <!-- Add other states if required -->
+                    </select>
+
+                    <label for="year">Year(2023-2030):</label>
+                    <input type="number" id="year" placeholder="e.g. 2025" min="2023" max="2030">
+
+                    <div><input type="submit" class="btn btn-info" value="Predict Now" onclick="getRecommendation()"></div>
+                </form>
+
+                <p></p>
+
+                <div id="results">
+                    <p><strong>Future Weekly Income Prediction: $</strong> <span id="finalIncome"></span></p>
+                    <p><strong>Description:</strong> <span id="recommendation"></span></p>
+                </div>
+
+                <script>
+                    let data = [];
+
+                    // Fetch CSV data from the given path
+                    fetch("./Data/final_predicted_incomes_with_recommendation_2023_to_2030.csv")
+                        .then(response => response.text())
+                        .then(parseCSV)
+                        .then(parsedData => {
+                            data = parsedData;
+                        })
+                        .catch(error => console.error("Failed to fetch and parse CSV:", error));
+
+                    function parseCSV(csvString) {
+                        const rows = csvString.trim().split("\n");
+                        const headers = rows[0].split(",").map(cell => cell.trim());
+                        return rows.slice(1).map(rowString => {
+                            const row = [];
+                            let startOfCell = 0;
+                            let inQuotes = false;
+                            for (let i = 0; i < rowString.length; i++) {
+                                if (rowString[i] === '"') {
+                                    inQuotes = !inQuotes;
+                                }
+                                if (i === rowString.length - 1 || (!inQuotes && rowString[i] === ',')) {
+                                    let cell = rowString.substring(startOfCell, i === rowString.length - 1 ? undefined : i).trim();
+                                    if (cell.startsWith('"') && cell.endsWith('"')) {
+                                        cell = cell.slice(1, -1);
+                                    }
+                                    row.push(cell);
+                                    startOfCell = i + 1;
+                                }
+                            }
+                            return headers.reduce((memo, header, index) => {
+                                memo[header] = row[index];
+                                return memo;
+                            }, {});
+                        });
+                    }
+
+                    document.getElementById('inputForm').addEventListener('submit', function(event) {
+                        event.preventDefault(); // prevent default form submission action
+                        getRecommendation(); // call the recommendation function
+                    });
+
+                    function getRecommendation() {
+                        const genderValue = document.getElementById('gender').value;
+                        const industryValue = document.getElementById('industry').value;
+                        const stateValue = document.getElementById('state').value;
+                        const yearValue = parseInt(document.getElementById('year').value);
+
+                        const result = data.find(d => d.gender === genderValue && d.industry === industryValue && d.state === stateValue && d.year == yearValue);
+
+                        if (result) {
+                            document.getElementById('finalIncome').textContent = parseFloat(result.final_income).toFixed(2);
+                            document.getElementById('recommendation').textContent = result.recommendation;
+                        } else {
+                            alert('No data found for the selected inputs.');
+                        }
+                    }
+                </script>
+                <p>Currently, the web application only have basic prediction function for future salary.<br>For full features of the prediction, you can download the small 'XSprediction' application below. It can run on Windows devices.<br>Just play around with the retro style terminal by typing in commands.<br><b>Have fun!</b></p>
+                <a class="btn btn-primary btn-lg" href="XSprediction.zip" download="XSprediction.zip" style="margin-bottom: 20px;">Download the XSprediction app! (Windows Version)</a>
+                <img src="./Images/Windows10.jpg" alt="Windows Logo" width="60" height="60" style="margin-bottom: 20px;">
+                <img src="./Images/XSprediction.png" alt="Description of Image" width="900" height="600">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<footer class="footer-container white-text-container">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-xs-12">
+                <h3>XSalary</h3>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-7">
+                        <p><small> &copy; 2023 IDers(TP22). All rights reserved. </small>
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        navbarFixedTopAnimation();
+    });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+        scrollRevelation('.reveal');
+    });
+</script>
+<script type="text/javascript" src="js/main.0cf8b554.js"></script>
+</body>
+</html>

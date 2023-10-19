@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XSalary - Profile</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./css/assets/X-icon.png">
+  <link href="./css/assets/X-icon.png" rel="icon">
+
+  <link href="" rel="stylesheet">
+
+  <link href="css/main.550dcf66.css" rel="stylesheet">
+  <style>
+    #chartContainer {
+      width: 600px;
+      height: 600px;
+      margin: 0 auto; /* This centers the block horizontally */
+    }
+     .navbar .dropdown-menu {
+       background-color: rgba(255, 255, 255, 0.5); /* white with 50% opacity */
+       border-radius: 10px;
+       max-height: 400px; /* Adjust this value as needed */
+       overflow-y: auto;
+     }
+    .navbar .dropdown-menu li a {
+      color: black;
+    }
+    /* Style for rounding the corners of dropdown items on hover */
+    .navbar .dropdown-menu li:hover a {
+      background-color: rgba(23, 99, 233, 0.9); /* white with 90% opacity */
+      border-radius: 5px;
+    }
+    /* Style for the text color of dropdown items when hovered */
+    .navbar .dropdown-menu li a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-default active">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="home.html" title="">
+          <img src="Images/logo.png" height ="80em" class="navbar-logo-img" alt="">
+          XSalary
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="home.html" title="">Home</a></li>
+          <li><a href="profile.html" title="">Future Salary</a></li>
+          <li><a href="personality.html" title="">Personality Test</a></li>
+          <li class="dropdown">
+            <a href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="false">*Skill Set<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="skills/S01.html">Mining</a></li>
+              <li><a href="skills/S02.html">Manufacturing</a></li>
+              <li><a href="skills/S03.html">Electricity, Gas, Water & Waste services</a></li>
+              <li><a href="skills/S04.html">Construction</a></li>
+              <li><a href="skills/S05.html">Wholesale Trade</a></li>
+              <li><a href="skills/S06.html">Retail Trade</a></li>
+              <li><a href="skills/S07.html">Accommodation & Food Services</a></li>
+              <li><a href="skills/S08.html">Transport, Postal & Warehousing</a></li>
+              <li><a href="skills/S09.html">Information Media & Telecommunications</a></li>
+              <li><a href="skills/S10.html">Financial & Insurance Services</a></li>
+              <li><a href="skills/S11.html">Rental, Hiring & Real Estate Services</a></li>
+              <li><a href="skills/S12.html">Professional, Scientific & Technical Services</a></li>
+              <li><a href="skills/S13.html">Administrative & Support Services</a></li>
+              <li><a href="skills/S14.html">Public Administration & Safety</a></li>
+              <li><a href="skills/S15.html">Education & Training</a></li>
+              <li><a href="skills/S16.html">Health Care & Social Assistance</a></li>
+              <li><a href="skills/S17.html">Arts & Recreation Services</a></li>
+            </ul>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="hero-full-container background-image-container white-text-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Future Salary</h1>
+        <h4>This is the core service of XSalary. We offer better understanding of selected industry. And give recommendations of popular well-paid jobs you can choose to suit your preference!</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-container contact-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="section-container-spacer">
+          <h2 class="text-center">Salary Analysis</h2>
+          <b class="text-center">First of all, you should have a preference of specialty,the industry you dreamed about working in. Make a choice, and type in your expected salary. Let's see if the real world situation meets your expectations.</b>
+        </div>
+        <div class="card-container">
+          <div class="card card-shadow col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 reveal">
+            <h2>Select Your Area of Expertise</h2>
+            <form id="user-form">
+              <label for="industry-select">Area of Expertise:</label>
+              <select id="industry-select">
+                <!-- Add the 18 areas here -->
+                <option value="Mining">Mining</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Electricity, Gas, Water & Waste services">Electricity, Gas, Water & Waste services</option>
+                <option value="Construction">Construction</option>
+                <option value="Wholesale Trade">Wholesale Trade</option>
+                <option value="Retail Trade">Retail Trade</option>
+                <option value="Accommodation & Food Services">Accommodation & Food Services</option>
+                <option value="Transport, Postal & Warehousing">Transport, Postal & Warehousing</option>
+                <option value="Information Media & Telecommunications">Information Media & Telecommunications</option>
+                <option value="Financial & Insurance Services">Financial & Insurance Services</option>
+                <option value="Rental, Hiring & Real Estate Services">Rental, Hiring & Real Estate Services</option>
+                <option value="Professional, Scientific & Technical Services">Professional, Scientific & Technical Services</option>
+                <option value="Administrative & Support Services">Administrative & Support Services</option>
+                <option value="Public Administration & Safety">Public Administration & Safety</option>
+                <option value="Education & Training">Education & Training</option>
+                <option value="Health Care & Social Assistance">Health Care & Social Assistance</option>
+                <option value="Arts & Recreation Services">Arts & Recreation Services</option>
+                <option value="Other Services">Other Services</option>
+              </select>
+              <label for="expected-salary">Expected Weekly Salary ($AUD):</label>
+              <input type="number" id="expected-salary" placeholder="Expected Salary">
+
+              <button id="submit-button" class="btn btn-info btn-sm">Submit</button>
+            </form>
+          </div>
+          <div class="card-image col-xs-12" style="background-image: url('Images/MainBG.jpg')">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+<b>
+  Not sure what area of industry to choose? That's OK. Perhaps we can provide some hints. Below we made a doughnut chart using up-to-date industry data to give a general income rate performance. Higher income rate could mean that you can have more spare salary.
+</b>
+</div>
+<div class="section-container contact-container">
+<h2 class="text-center">Hey! Here's a doughnut shows current industry performance(income rate):</h2>
+  <p class="text-center">The legends are sorted in descending order.<br>If you want it to show top data, just click the legend labels from the end to hide them~</p>
+</div>
+
+<div id="chartContainer">
+  <canvas id="industryDoughnutChart" width="400" height="400"></canvas>
+</div>
+<footer class="footer-container white-text-container">
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col-xs-12">
+        <h3>XSalary</h3>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-7">
+            <p><small> &copy; 2023 IDers(TP22). All rights reserved. </small>
+            </p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navbarFixedTopAnimation();
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navActivePage();
+    scrollRevelation('.reveal');
+  });
+</script>
+
+<script type="text/javascript">
+  var industry;
+  $.ajax({
+    url: "industry.php",
+    type: "GET",
+    dataType: "json",
+    success: function(data) {
+      console.log(data);
+      industry = data
+      // industry = jQuery.parseJSON(data);
+      // console.log(typeof(industry));
+      drawIndustryDoughnutChart(industry);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      console.log(textStatus, errorThrown);
+    }
+  });
+  function drawIndustryDoughnutChart(industry_data) {
+    let industries = [];
+    let incomeRates = [];
+    let totalIncome = 0;
+
+    for(let index in industry_data) {
+      industries.push(industry_data[index][1]);
+      // Parse the income rate as a float before pushing it into the array
+      incomeRates.push(parseFloat(industry_data[index][2]));
+      totalIncome += parseFloat(industry_data[index][2]);
+    }
+
+    // Sort industries and incomeRates in descending order based on incomeRates
+    const sortedIndices = incomeRates.map((rate, index) => index).sort((a, b) => incomeRates[b] - incomeRates[a]);
+    industries = sortedIndices.map(index => industries[index]);
+    incomeRates = sortedIndices.map(index => incomeRates[index]);
+
+    let percentageRates = incomeRates.map(rate => (rate / totalIncome * 100).toFixed(2));  // Convert to percentage
+
+    // Predefined list of colors (more if needed)
+    const colors = [
+      '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#FF9F40',
+      '#FFCD56', '#C9CBCF', '#7FB3D5', '#EC7063', '#58D68D',
+      '#F5B041', '#BB8FCE', '#85C1E9', '#E74C3C', '#F0E68C',
+      '#7DCEA0', '#D35400', '#3498DB', '#E59866'
+    ];
+
+    const ctx = document.getElementById('industryDoughnutChart').getContext('2d');
+    const data = {
+      labels: industries.map((industry, i) => `${industry} (${percentageRates[i]}%)`),  // Append percentages to labels
+      datasets: [{
+        data: incomeRates,
+        backgroundColor: colors.slice(0, industries.length)  // Slice colors to match the number of industries
+      }]
+    };
+
+    const options = {
+      responsive: true,
+      legend: {
+        position: 'right',
+        labels: {
+          // Sort legend items in the same order as your data
+          generateLabels: function(chart) {
+            const original = Chart.defaults.doughnut.legend.labels.generateLabels;
+            return original.call(this, chart).sort((a, b) => b.datasetIndex - a.datasetIndex);
+          }
+        }
+      },
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            return `${data.labels[tooltipItem.index]}: ${data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]}`;
+          }
+        }
+      }
+    };
+
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      options: options
+    });
+  }
+</script>
+
+<script type="text/javascript" src="js/main.0cf8b554.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
